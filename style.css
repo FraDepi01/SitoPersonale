@@ -1,3 +1,4 @@
 body {background-color: antiquewhite;}
 h1 {color: rgb(0, 0, 0);}
+h1 {font-family: Montserrat-ExtraBold; scr:local(Montserrat-ExtraBold) url(Montserrat-ExtraBold.ttf) format('truetype')}
 p {color: rgb(0, 0, 0);}
