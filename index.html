@@ -42,10 +42,14 @@
             color: #ffffff; /* Colore vivace per i link */
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, border 0.3s ease; /* Aggiunge una transizione fluida */
+            border: 2px solid transparent; /* Bordo inizialmente trasparente */
+            padding: 5px 10px; /* Spaziatura interna per il bordo */
+            border-radius: 5px; /* Angoli arrotondati */
         }
         nav ul li a:hover {
             color: #e65100; /* Colore più scuro al passaggio del mouse */
+            border: 2px solid #ffffff; /* Mostra il bordo bianco al passaggio del mouse */
         }
         section {
             padding: 40px 20px;
@@ -106,6 +110,12 @@
             margin: 10px 0; /* Aggiunge spazio tra gli elementi */
             color: #ff5722; /* Colore vivace per gli elementi della lista */
         }
+        header h1 {
+            margin-bottom: 5px; /* Riduce lo spazio sotto il nome */
+        }
+        header p {
+            margin-top: 0; /* Rimuove lo spazio sopra la scritta "Graphic Designer" */
+        }
     </style>
 </head>
 <body>
@@ -141,6 +151,21 @@
             <img src="img2.jpg" alt="Progetto 2">
             <img src="img3.jpg" alt="Progetto 3">
         </div>
+    </section>
+    
+    <section id="services" style="background-color: #ff9800; color: #ffffff; padding: 40px 20px; text-align: center;">
+        <h2 style="color: #ffffff;">I Miei Servizi</h2>
+        <p style="max-width: 700px; margin: 0 auto; line-height: 1.8;">
+            Offro una gamma di servizi per aiutarti a distinguerti:
+        </p>
+        <ul class="centered-list" style="list-style: none; padding: 0; margin: 20px 0;">
+            <li style="margin: 10px 0; font-size: 18px;">Branding & Identità Visiva</li>
+            <li style="margin: 10px 0; font-size: 18px;">Grafica Editoriale</li>
+            <li style="margin: 10px 0; font-size: 18px;">Comunicazione Visiva</li>
+        </ul>
+        <p style="font-size: 16px; margin-top: 20px;">
+            Contattami per discutere il tuo progetto e creare qualcosa di straordinario!
+        </p>
     </section>
     
     <section id="contact">
