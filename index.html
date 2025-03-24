@@ -14,7 +14,7 @@
             padding: 0;
         }
         header {
-            background-color: #4bff6c;
+            background-color: #f1f1f1;
             text-align: center;
             padding: 40px 20px;
         }
@@ -25,7 +25,7 @@
             object-fit: cover;
             margin: 20px auto;
             display: block;
-            border: 3px solid #ffcc00;
+            border: 3px solid #ff0400;
         }
         nav ul {
             list-style: none;
@@ -36,7 +36,7 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #ffcc00;
+            color: #ff0400;
             text-decoration: none;
             font-weight: bold;
         }
@@ -77,16 +77,25 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: transform 0.3s ease, background-color 0.3s ease; /* Aggiunge una transizione fluida */
         }
         button:hover {
             background-color: #e6b800;
+            transform: scale(1.1); /* Allarga il pulsante del 10% */
         }
         footer {
             background-color: #1e1e1e;
             text-align: center;
             padding: 20px;
             font-size: 14px;
+        }
+        .centered-list {
+            list-style: none; /* Rimuove i punti elenco */
+            padding: 0;
+            text-align: center; /* Allinea il testo al centro */
+        }
+        .centered-list li {
+            margin: 10px 0; /* Aggiunge spazio tra gli elementi */
         }
     </style>
 </head>
@@ -108,10 +117,10 @@
         <h2>Chi Sono</h2>
         <p>Ciao! Sono un graphic designer con la passione per la comunicazione visiva e il branding. Mi occupo di creare identità visive uniche, loghi, illustrazioni e materiali grafici che aiutano aziende e professionisti a distinguersi. Ogni mio progetto nasce da ricerca, strategia e creatività, per trasformare idee in design efficaci e memorabili. Sempre alla ricerca di nuove ispirazioni, lavoro con cura e attenzione ai dettagli per offrire soluzioni su misura che lasciano il segno.</p>
         <p>I miei servizi includono:</p>
-        <ul>
-            <li>Branding & Identità Visiva</li>
-            <li>Grafica Editoriale</li>
-            <li>Comunicazione Visiva</li>
+        <ul class="centered-list">
+            Branding & Identità Visiva
+            Grafica Editoriale
+            Comunicazione Visiva
         </ul>
         <p>Se hai un progetto in mente, parliamone!</p>
     </section>
