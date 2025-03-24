@@ -17,7 +17,7 @@
         header {
             background-color: #ff5722; /* Colore vivace per l'intestazione */
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 20px; /* Riduce il padding verticale per renderlo più sottile */
             color: #ffffff; /* Testo bianco per contrasto */
         }
         .profile-pic {
@@ -25,9 +25,28 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 20px auto;
+            margin: 10px auto; /* Riduce il margine */
             display: block;
             border: 3px solid #f1f1f1; /* Dettaglio vivace */
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Spaziatura tra i pulsanti */
+            margin-top: -20px; /* Posiziona i pulsanti sopra la sezione successiva */
+        }
+        .nav-buttons a {
+            background-color: #ff5722; /* Sfondo rosso per i pulsanti */
+            color: #ffffff; /* Testo bianco */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px; /* Spaziatura interna */
+            border-radius: 5px; /* Angoli arrotondati */
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione fluida */
+        }
+        .nav-buttons a:hover {
+            background-color: #e64a19; /* Colore più scuro al passaggio del mouse */
+            transform: scale(1.1); /* Ingrandisce leggermente il pulsante */
         }
         nav ul {
             list-style: none;
@@ -97,8 +116,8 @@
         footer {
             background-color: #333333; /* Sfondo scuro per il footer */
             text-align: center;
-            padding: 20px;
-            font-size: 14px;
+            padding: 5px 20px; /* Riduce il padding verticale per renderlo più sottile */
+            font-size: 12px; /* Riduce leggermente la dimensione del testo */
             color: #ffffff; /* Testo bianco per contrasto */
         }
         .centered-list {
@@ -108,7 +127,7 @@
         }
         .centered-list li {
             margin: 10px 0; /* Aggiunge spazio tra gli elementi */
-            color: #ff5722; /* Colore vivace per gli elementi della lista */
+            color: #f1f1f1; /* Colore vivace per gli elementi della lista */
         }
         header h1 {
             margin-bottom: 5px; /* Riduce lo spazio sotto il nome */
