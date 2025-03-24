@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #f1f1f1; /* Colore di sfondo chiaro */
+            color: #333333; /* Colore del testo principale per un buon contrasto */
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6; /* Migliora la leggibilità */
         }
         header {
-            background-color: #ff76a4;
+            background-color: #ff5722; /* Colore vivace per l'intestazione */
             text-align: center;
             padding: 40px 20px;
+            color: #ffffff; /* Testo bianco per contrasto */
         }
         .profile-pic {
             width: 150px;
@@ -25,36 +27,41 @@
             object-fit: cover;
             margin: 20px auto;
             display: block;
-            border: 3px solid #ff0400;
+            border: 3px solid #ff9800; /* Dettaglio vivace */
         }
         nav ul {
             list-style: none;
             padding: 0;
+            text-align: center;
         }
         nav ul li {
             display: inline;
             margin: 0 15px;
         }
         nav ul li a {
-            color: #ff0400;
+            color: #ff9800; /* Colore vivace per i link */
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #e65100; /* Colore più scuro al passaggio del mouse */
         }
         section {
-            padding: 60px 20px;
+            padding: 40px 20px;
             text-align: center;
+            max-width: 800px; /* Restringe la larghezza del testo */
+            margin: 0 auto; /* Centra il contenuto */
         }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        h2 {
+            color: #ff5722; /* Colore vivace per i titoli */
         }
         .gallery img {
             width: 30%;
             max-width: 300px;
             border-radius: 8px;
             transition: transform 0.3s;
+            border: 2px solid #ff9800; /* Dettaglio vivace */
         }
         .gallery img:hover {
             transform: scale(1.05);
@@ -65,14 +72,14 @@
             max-width: 500px;
             margin: 10px auto;
             padding: 10px;
-            background-color: #333;
-            color: #000000;
-            border: none;
+            background-color: #ffffff; /* Sfondo bianco per i campi */
+            color: #333333; /* Testo scuro per leggibilità */
+            border: 2px solid #ff9800; /* Bordo vivace */
             border-radius: 5px;
         }
         button {
-            background-color: #ffcc00;
-            color: #121212;
+            background-color: #ff5722;
+            color: #ffffff;
             padding: 10px 20px;
             border: none;
             cursor: pointer;
@@ -80,14 +87,15 @@
             transition: transform 0.3s ease, background-color 0.3s ease; /* Aggiunge una transizione fluida */
         }
         button:hover {
-            background-color: #e6b800;
+            background-color: #e64a19;
             transform: scale(1.1); /* Allarga il pulsante del 10% */
         }
         footer {
-            background-color: #1e1e1e;
+            background-color: #333333; /* Sfondo scuro per il footer */
             text-align: center;
             padding: 20px;
             font-size: 14px;
+            color: #ffffff; /* Testo bianco per contrasto */
         }
         .centered-list {
             list-style: none; /* Rimuove i punti elenco */
@@ -96,13 +104,14 @@
         }
         .centered-list li {
             margin: 10px 0; /* Aggiunge spazio tra gli elementi */
+            color: #ff5722; /* Colore vivace per gli elementi della lista */
         }
     </style>
 </head>
 <body>
     <header>
         <img src="FotoCV-min.jpg" alt="Francesco De Pinto" class="profile-pic">
-        <h1>Il tuo Nome</h1>
+        <h1>Francesco De Pinto</h1>
         <p>Graphic Designer</p>
         <nav>
             <ul>
