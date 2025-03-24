@@ -1,27 +1,108 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <title>FraDepi</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Designer - Il tuo Nome</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-  </head>
-
-  <body>
-    <h1>FRADEPI</h1>
-    <p>Ciao sono Fra</p>
-    <img src="FotoCV-min.jpg" alt="Francesco De Pinto" width="100%"> <br>
-
-    <a href="https://www.google.com">GOOGLE</a>
-
-    <h2>Chi sono</h2>
-    <p>Francesco De Pinto <br>
-      Grafic Designer
-    </p>
-
-    <div id="footer"><br>
-      <a href="#C1">About me</a>
-    </div>
-
-  </body>
-
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        form input, form textarea {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #1e1e1e;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FraDepi</h1>
+        <p>Graphic Designer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Chi Sono</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>Chi Sono</h2>
+        <p>Breve descrizione della tua esperienza e competenze nel design.</p>
+    </section>
+    
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="gallery">
+            <img src="img1.jpg" alt="Progetto 1">
+            <img src="img2.jpg" alt="Progetto 2">
+            <img src="img3.jpg" alt="Progetto 3">
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contattami</h2>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Messaggio" required></textarea>
+            <button type="submit">Invia</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Il tuo Nome - Tutti i diritti riservati.</p>
+    </footer>
+</body>
 </html>
