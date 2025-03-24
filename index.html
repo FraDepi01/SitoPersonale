@@ -20,7 +20,7 @@
             text-align: center;
             padding: 10px 20px; /* Riduce il padding verticale per stringere la barra */
             color: #ffffff; /* Testo bianco per contrasto */
-            font-family: 'Dancing Script', cursive; /* Font calligrafico */
+            font-family: Arial, Helvetica, sans-serif; /* Font precedente per il nome */
         }
         .profile-pic {
             width: 120px; /* Riduce leggermente la dimensione dell'immagine */
@@ -132,12 +132,13 @@
             color: #f1f1f1; /* Colore vivace per gli elementi della lista */
         }
         header h1 {
-            margin-bottom: 2px; /* Riduce lo spazio sotto il nome */
+            margin-bottom: 0; /* Rimuove completamente lo spazio sotto il nome */
             font-size: 28px; /* Dimensione del font per il nome */
         }
         header p {
-            margin-top: 0; /* Rimuove lo spazio sopra la scritta "Graphic Designer" */
+            margin-top: -5px; /* Avvicina ulteriormente la scritta "Graphic Designer" al nome */
             font-size: 18px; /* Dimensione del font per la scritta */
+            font-family: 'Dancing Script', cursive; /* Font calligrafico per "Graphic Designer" */
         }
     </style>
 </head>
@@ -180,7 +181,7 @@
         <p style="max-width: 700px; margin: 0 auto; line-height: 1.8;">
             Offro una gamma di servizi per aiutarti a distinguerti:
         </p>
-        <ul class="centered-list" style="list-style: none; padding: 0; margin: 20px 0;">
+        <ul class="centered-list" style="list-style: none; color: black; padding: 0; margin: 20px 0;">
             <li style="margin: 10px 0; font-size: 18px;">Branding & Identità Visiva</li>
             <li style="margin: 10px 0; font-size: 18px;">Grafica Editoriale</li>
             <li style="margin: 10px 0; font-size: 18px;">Comunicazione Visiva</li>
