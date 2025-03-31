@@ -47,9 +47,10 @@ header .info {
 
 .nav-buttons {
     display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    align-items: center; /* Align vertically with the search bar */
     gap: 10px; /* Adjust spacing between buttons */
     margin: 0; /* Remove margins */
-    order: 2; /* Ensure it stays on the right */
 }
 
 .nav-buttons a {
