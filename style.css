@@ -53,7 +53,7 @@ header .info {
     margin: 0; /* Remove margins */
     position: absolute; /* Position within the header */
     right: 20px; /* Align to the far right */
-    top: 20px; /* Adjust vertical alignment */
+    top: 50px; /* Adjust vertical alignment to match the search bar */
 }
 
 .nav-buttons a {
