@@ -9,10 +9,10 @@ body {
 
 header {
     display: flex;
-    flex-direction: row; /* Align elements horizontally */
-    justify-content: space-between; /* Space out content */
-    align-items: center; /* Center-align vertically */
-    padding: 10px 20px; /* Adjust padding */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align content horizontally */
+    justify-content: center; /* Center-align content vertically */
+    padding: 20px; /* Adjust padding for spacing */
     background-color: #ff5722;
     position: sticky;
     top: 0;
@@ -28,8 +28,14 @@ header {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0px 0; /* Add spacing above and below */
+    margin: 0; /* Remove margin */
     border: 2px solid #f1f1f1;
+}
+
+header h3 {
+    margin: 5px 0 0 0; /* Minimize spacing between the image and the name */
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: center; /* Center-align the name */
 }
 
 header .info {
