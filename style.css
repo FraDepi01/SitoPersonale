@@ -53,7 +53,7 @@ header .info {
     margin: 0; /* Remove margins */
     position: absolute; /* Position within the header */
     right: 20px; /* Align to the far right */
-    top: 0; /* Align vertically at the top */
+    top: 20px; /* Align vertically at the top */
 }
 
 .nav-buttons a {
