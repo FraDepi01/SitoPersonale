@@ -47,12 +47,13 @@ header .info {
 
 .nav-buttons {
     display: flex;
-    justify-content: center; /* Center-align buttons */
+    justify-content: flex-end; /* Align buttons to the right */
     align-items: center; /* Align vertically */
     gap: 15px; /* Add spacing between buttons */
     margin: 0; /* Remove margins */
-    position: relative; /* Adjust position for centering */
-    top: 10px; /* Adjust vertical alignment */
+    position: absolute; /* Position within the header */
+    right: 20px; /* Align to the far right */
+    top: 0; /* Align vertically at the top */
 }
 
 .nav-buttons a {
