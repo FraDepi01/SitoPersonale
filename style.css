@@ -168,7 +168,7 @@ footer {
     align-items: center;
     justify-content: flex-start; /* Fully align the search bar to the left */
     padding: 0; /* Remove extra padding */
-    margin: 0; /* Remove margins */
+    margin: 10px; /* Remove margins */
     position: absolute; /* Ensure it stays at the left edge */
     left: 0; /* Align to the left of the page */
 }
