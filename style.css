@@ -33,13 +33,15 @@ header p {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 10px 0; /* Add spacing above and below */
+    margin: 5px 0; /* Add spacing above and below */
     border: 2px solid #f1f1f1;
 }
 
 header .info {
-    text-align: center; /* Center-align text */
-    margin-top: 5px; /* Add slight spacing below the image */
+    display: flex;
+    flex-direction: row; /* Align elements horizontally */
+    align-items: center; /* Center-align vertically */
+    gap: 5px; /* Minimal spacing between elements */
 }
 
 .nav-buttons {
