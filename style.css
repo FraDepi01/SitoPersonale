@@ -132,3 +132,49 @@ footer {
     margin: 10px 0;
     color: #f1f1f1;
 }
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar input {
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.search-bar button {
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+}
+
+.search-bar button i {
+    font-size: 16px;
+}
