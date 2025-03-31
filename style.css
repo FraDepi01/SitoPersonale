@@ -8,9 +8,12 @@ body {
 }
 
 header {
+    display: flex;
+    justify-content: space-between; /* Space out elements */
+    align-items: center; /* Align items vertically */
+    padding: 5px 20px; /* Adjust padding */
     background-color: #ff5722;
     text-align: center;
-    padding: 5px 10px; /* Reduce padding */
     margin-bottom: 10px; /* Add slight margin below header */
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
@@ -33,9 +36,10 @@ header p {
 
 .nav-buttons {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px; /* Reduce spacing above navigation buttons */
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Adjust spacing between buttons */
+    margin: 0; /* Remove top margin */
+    order: 2; /* Ensure it stays on the right */
 }
 
 .nav-buttons a {
@@ -92,6 +96,15 @@ h2 {
     transform: scale(1.05);
 }
 
+.portfolio-item a {
+    color: inherit; /* Inherit text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.portfolio-item a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
 form input, form textarea {
     display: block;
     width: 80%;
@@ -143,7 +156,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
+    margin: 0; /* Remove bottom margin */
+    order: 1; /* Ensure it stays on the left */
 }
 
 .search-bar form {
