@@ -23,6 +23,16 @@ header {
     height: auto; /* Ensure the height adjusts to content */
 }
 
+header h2 {
+    margin: 0; /* Remove extra margin */
+    font-size: 1.2rem; /* Adjust font size */
+    text-align: center; /* Center-align the text */
+    position: absolute; /* Position it relative to the header */
+    top: 20px; /* Align it with the search bar */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+}
+
 .profile-pic {
     width: 60px; /* Adjust size of the profile picture */
     height: 60px;
@@ -53,7 +63,7 @@ header .info {
     margin: 0; /* Remove margins */
     position: absolute; /* Position within the header */
     right: 20px; /* Align to the far right */
-    top: 20px; /* Align vertically at the top */
+    top: 40px; /* Align vertically at the top */
 }
 
 .nav-buttons a {
