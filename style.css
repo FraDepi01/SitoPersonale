@@ -225,3 +225,11 @@ footer {
 .search-bar button i {
     font-size: 16px;
 }
+
+.main-title {
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add spacing from the top */
+    font-size: 2rem; /* Adjust font size */
+    color: #ff5722; /* Match the theme color */
+    font-family: 'Roboto', sans-serif; /* Use consistent font */
+}
