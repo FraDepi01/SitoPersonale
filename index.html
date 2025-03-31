@@ -10,48 +10,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f1f1f1; /* Colore di sfondo chiaro */
-            color: #333333; /* Colore del testo principale per un buon contrasto */
-            font-family: 'Roboto', sans-serif; /* Cambia il font in Roboto */
+            background-color: #f1f1f1;
+            color: #333333;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6; /* Migliora la leggibilità */
+            line-height: 1.6;
         }
         header {
-            background-color: #ff5722; /* Colore vivace per l'intestazione */
+            background-color: #ff5722;
             text-align: center;
-            padding: 10px 20px; /* Riduce il padding verticale per stringere la barra */
-            color: #ffffff; /* Testo bianco per contrasto */
-            font-family: 'Roboto', sans-serif; /* Cambia il font in Roboto */
+            padding: 10px 20px;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
         }
         .profile-pic {
-            width: 120px; /* Riduce leggermente la dimensione dell'immagine */
+            width: 120px;
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 10px auto; /* Riduce il margine */
+            margin: 10px auto;
             display: block;
-            border: 3px solid #f1f1f1; /* Dettaglio vivace */
+            border: 3px solid #f1f1f1;
         }
         .nav-buttons {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Spaziatura tra i pulsanti */
-            margin-top: 20px; /* Abbassa ulteriormente i pulsanti */
+            gap: 15px;
+            margin-top: 20px;
         }
         .nav-buttons a {
-            background-color: #ff5722; /* Sfondo rosso per i pulsanti */
-            color: #ffffff; /* Testo bianco */
+            background-color: #ff5722;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 20px; /* Spaziatura interna */
-            border-radius: 5px; /* Angoli arrotondati */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione fluida */
-            font-family: 'Roboto', sans-serif; /* Cambia il font in Roboto */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-family: 'Roboto', sans-serif;
         }
         .nav-buttons a:hover {
-            background-color: #e64a19; /* Colore più scuro al passaggio del mouse */
-            transform: scale(1.1); /* Ingrandisce leggermente il pulsante */
+            background-color: #e64a19;
+            transform: scale(1.1);
         }
         nav ul {
             list-style: none;
@@ -63,24 +63,24 @@
             margin: 0 15px;
         }
         nav ul li a {
-            color: #ffffff; /* Colore vivace per i link */
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s ease, border 0.3s ease; /* Aggiunge una transizione fluida */
-            border: 2px solid transparent; /* Bordo inizialmente trasparente */
-            padding: 5px 10px; /* Spaziatura interna per il bordo */
-            border-radius: 5px; /* Angoli arrotondati */
+            transition: color 0.3s ease, border 0.3s ease;
+            border: 2px solid transparent;
+            padding: 5px 10px;
+            border-radius: 5px;
         }
         nav ul li a:hover {
-            color: #e65100; /* Colore più scuro al passaggio del mouse */
-            border: 2px solid #ffffff; /* Mostra il bordo bianco al passaggio del mouse */
+            color: #e65100;
+            border: 2px solid #ffffff;
         }
         section {
             padding: 40px 20px;
             text-align: center;
-            max-width: 800px; /* Restringe la larghezza del testo */
-            margin: 0 auto; /* Centra il contenuto */
-            font-family: 'Roboto', sans-serif; /* Cambia il font in Roboto */
+            max-width: 800px;
+            margin: 0 auto;
+            font-family: 'Roboto', sans-serif;
         }
         h2 {
             color: #ff5722;
@@ -90,7 +90,7 @@
             max-width: 300px;
             border-radius: 8px;
             transition: transform 0.3s;
-            border: 2px solid #ff9800; /* Dettaglio vivace */
+            border: 2px solid #ff9800;
         }
         .gallery img:hover {
             transform: scale(1.05);
@@ -101,9 +101,9 @@
             max-width: 500px;
             margin: 10px auto;
             padding: 10px;
-            background-color: #ffffff; /* Sfondo bianco per i campi */
-            color: #333333; /* Testo scuro per leggibilità */
-            border: 2px solid #ff9800; /* Bordo vivace */
+            background-color: #ffffff;
+            color: #333333;
+            border: 2px solid #ff9800;
             border-radius: 5px;
         }
         button {
@@ -113,75 +113,73 @@
             border: none;
             cursor: pointer;
             border-radius: 5px;
-            transition: transform 0.3s ease, background-color 0.3s ease; /* Aggiunge una transizione fluida */
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
         button:hover {
             background-color: #e64a19;
-            transform: scale(1.1); /* Allarga il pulsante del 10% */
+            transform: scale(1.1);
         }
         footer {
-            background-color: #333333; /* Sfondo scuro per il footer */
+            background-color: #333333;
             text-align: center;
-            padding: 5px 20px; /* Riduce il padding verticale per renderlo più sottile */
-            font-size: 12px; /* Riduce leggermente la dimensione del testo */
-            color: #ffffff; /* Testo bianco per contrasto */
-            font-family: 'Roboto', sans-serif; /* Cambia il font in Roboto */
+            padding: 5px 20px;
+            font-size: 12px;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
         }
         .centered-list {
-            list-style: none; /* Rimuove i punti elenco */
+            list-style: none;
             padding: 0;
-            text-align: center; /* Allinea il testo al centro */
+            text-align: center;
         }
         .centered-list li {
-            margin: 10px 0; /* Aggiunge spazio tra gli elementi */
-            color: #f1f1f1; /* Colore vivace per gli elementi della lista */
+            margin: 10px 0;
+            color: #f1f1f1;
         }
         header h1 {
-            margin-bottom: 0; /* Rimuove completamente lo spazio sotto il nome */
-            font-size: 28px; /* Dimensione del font per il nome */
-            font-weight: 800; /* Extrabold per il nome */
+            margin-bottom: 0;
+            font-size: 28px;
+            font-weight: 800;
         }
         header p {
-            margin-top: -5px; /* Avvicina ulteriormente la scritta "Graphic Designer" al nome */
-            font-size: 18px; /* Dimensione del font per la scritta */
-            font-family: 'Dancing Script', cursive; /* Font calligrafico per "Graphic Designer" */
+            margin-top: -5px;
+            font-size: 18px;
+            font-family: 'Dancing Script', cursive;
         }
         .portfolio-item:hover {
-            transform: scale(1.05); /* Ingrandisce leggermente l'elemento */
+            transform: scale(1.05);
         }
         .search-bar button:active {
-            background-color: rgba(230, 74, 25, 0.8); /* Colore più scuro al clic */
+            background-color: rgba(230, 74, 25, 0.8);
         }
         .search-bar button {
-            background-color: rgba(255, 87, 34, 0.8); /* Colore iniziale */
+            background-color: rgba(255, 87, 34, 0.8);
             color: #ffffff;
             border: none;
             padding: 0 15px;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.2s ease; /* Transizione per il colore */
+            transition: background-color 0.2s ease;
         }
         .search-bar button {
-            background-color: rgba(255, 87, 34, 0.8); /* Colore iniziale */
+            background-color: rgba(255, 87, 34, 0.8);
             color: #ffffff;
             border: none;
             padding: 0 15px;
             border-radius: 0 5px 5px 0;
             cursor: pointer;
             font-size: 16px;
-            transition: transform 0.3s ease, background-color 0.3s ease; /* Transizione fluida */
-            z-index: 10; /* Porta il pulsante in primo piano */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            z-index: 10;
         }
-
         .search-bar button:hover {
-            transform: scale(1.1); /* Ingrandisce leggermente il pulsante */
-            background-color: rgba(230, 74, 25, 0.9); /* Colore più scuro al passaggio del mouse */
+            transform: scale(1.1);
+            background-color: rgba(230, 74, 25, 0.9);
         }
-
         .search-bar button:active {
-            transform: scale(1); /* Rimuove l'ingrandimento al clic */
-            background-color: rgba(200, 60, 20, 1); /* Colore ancora più scuro al clic */
+            transform: scale(1);
+            background-color: rgba(200, 60, 20, 1);
         }
     </style>
 </head>
@@ -200,22 +198,17 @@
         <img src="FotoCV-min.jpg" alt="Francesco De Pinto" class="profile-pic">
         <h1>Francesco De Pinto</h1>
         <p>Graphic Designer</p>
-        <!-- Onda decorativa -->
-       
     </header>
-
     <div class="nav-buttons">
         <a href="#about">Chi Sono</a>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contatti</a>
     </div>
-    
     <section id="about">
         <h2>Chi Sono</h2>
         <p style="margin-bottom: 5px;">Sono un graphic designer con una forte passione per la comunicazione visiva e il branding. Mi dedico a creare identità visive, loghi e materiali grafici che aiutano aziende e professionisti a distinguersi. Ogni progetto nasce da ricerca e creatività, per trasformare idee in design efficaci e memorabili.</p>
         <p style="margin-top: 5px;">Hai un progetto in mente? Parliamone!</p>
     </section>
-    
     <section id="portfolio" style="padding: 20px; background-color: #f1f1f1; text-align: center;">
         <h2 style="color: #ff5722; margin-bottom: 20px;">Portfolio</h2>
         <div class="portfolio-gallery" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px; scrollbar-width: thin;">
@@ -237,17 +230,13 @@
                     <p style="margin-top: 10px; font-size: 16px; color: #333333;">Rebrand ALSP</p>
                 </a>
             </div>
-            <!-- Aggiungi altri progetti qui -->
         </div>
     </section>
-    
     <section id="services" style="text-align: center; position: relative; margin-top: 40px;">
-        <!-- Titolo posizionato sopra il rettangolo -->
         <h2 style="color: #ff5722; margin-bottom: 20px; background-color: #f1f1f1; display: inline-block; padding: 5px 15px; border-radius: 5px;">
             I Miei Servizi
         </h2>
-        <br> <!-- Aggiunto il tag per andare a capo -->
-        <!-- Rettangolo rosso posizionato sotto -->
+        <br>
         <div style="background-color: #ff5722; color: #f1f1f1; padding: 15px 20px; border-radius: 5px; display: inline-block; margin-top: 10px;">
             <ul class="centered-list" style="list-style: none; color: #f1f1f1; padding: 0; margin: 0; line-height: 1.5;">
                 <li style="margin: 8px 0; font-size: 18px; font-weight: bold;">Branding & Identità Visiva</li>
@@ -256,7 +245,6 @@
             </ul>
         </div>
     </section>
-    
     <section id="contact">
         <h2>Contattami</h2>
         <form>
@@ -266,7 +254,6 @@
             <button type="submit">Invia</button>
         </form>
     </section>
-    
     <footer>
         <p>&copy; 2025 Il tuo Nome - Tutti i diritti riservati.</p>
     </footer>
