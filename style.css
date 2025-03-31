@@ -42,7 +42,7 @@ header .info {
     display: flex;
     flex-direction: row; /* Align elements horizontally */
     align-items: center; /* Center-align vertically */
-    gap: 5px; /* Minimal spacing between elements */
+    gap: 0px; /* Minimal spacing between elements */
 }
 
 .nav-buttons {
