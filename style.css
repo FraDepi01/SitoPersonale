@@ -9,10 +9,10 @@ body {
 
 header {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    padding: 60px 20px; /* Increase padding to move content further down */
+    flex-direction: row; /* Align elements side by side */
+    justify-content: space-between; /* Space out content */
+    align-items: center; /* Center content vertically */
+    padding: 5px 10px; /* Minimize padding for a smaller header */
     background-color: #ff5722;
     position: sticky;
     top: 0;
@@ -20,22 +20,28 @@ header {
     margin-bottom: 0;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
+    height: auto; /* Ensure the height adjusts to content */
 }
 
 header p {
-    margin-top: 2px; /* Minimize space between name and "Graphic Designer" */
-    font-size: 1.2rem; /* Optionally reduce font size for better alignment */
-    font-family: 'Dancing Script', cursive; /* Apply artistic font */
+    margin: 0; /* Remove extra spacing */
+    font-size: 0.9rem; /* Reduce font size */
+    font-family: 'Dancing Script', cursive;
 }
 
 .profile-pic {
-    width: 120px;
-    height: 120px;
+    width: 50px; /* Reduce size of the profile picture */
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 10px auto; /* Slightly increase margin for better spacing */
-    display: block;
-    border: 3px solid #f1f1f1;
+    margin: 0; /* Remove margin */
+    border: 2px solid #f1f1f1;
+}
+
+header .info {
+    display: flex;
+    flex-direction: column; /* Stack name and profession vertically */
+    margin-left: 10px; /* Add spacing between image and text */
 }
 
 .nav-buttons {
@@ -157,16 +163,12 @@ footer {
 }
 
 .search-bar {
-    position: absolute; /* Place it at the top */
-    top: 0; /* Align to the top of the page */
-    left: 0; /* Align to the left of the page */
-    width: 100%; /* Make it span the full width */
-    background-color: #ff5722; /* Match the header background */
-    padding: 5px 20px; /* Add padding for spacing */
+    flex: 1; /* Allow the search bar to take remaining space */
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-end; /* Align search bar to the right */
     align-items: center;
-    z-index: 1001; /* Ensure it stays above other elements */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove margins */
 }
 
 .search-bar form {
