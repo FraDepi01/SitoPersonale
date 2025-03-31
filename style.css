@@ -12,7 +12,7 @@ header {
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    padding: 50px 20px; /* Add more padding to push content down */
+    padding: 20px 20px; /* Reduce padding to minimize the red rectangle */
     background-color: #ff5722;
     position: sticky;
     top: 0;
@@ -23,7 +23,8 @@ header {
 }
 
 header p {
-    font-size: 1.5rem; /* Increase font size */
+    margin-top: 5px; /* Add minimal space between name and "Graphic Designer" */
+    font-size: 1.2rem; /* Optionally reduce font size for better alignment */
     font-family: 'Dancing Script', cursive; /* Apply artistic font */
 }
 
