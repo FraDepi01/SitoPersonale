@@ -9,14 +9,15 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between; /* Space out elements */
-    align-items: center; /* Align items vertically */
-    padding: 5px 20px; /* Adjust padding */
-    background-color: #ff5722; /* Red background */
-    position: sticky; /* Keep header at the top */
-    top: 0; /* Stick to the top */
-    z-index: 1000; /* Ensure it stays above other elements */
-    margin-bottom: 0; /* Remove bottom margin */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 50px 20px; /* Add more padding to push content down */
+    background-color: #ff5722;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 0;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
 }
