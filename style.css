@@ -9,8 +9,9 @@ body {
 
 header {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align image and name */
+    flex-direction: row; /* Align elements horizontally */
+    justify-content: space-between; /* Space out content */
+    align-items: center; /* Center-align vertically */
     padding: 10px 20px; /* Adjust padding */
     background-color: #ff5722;
     position: sticky;
@@ -33,7 +34,7 @@ header p {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 5px 0; /* Add spacing above and below */
+    margin: 0px 0; /* Add spacing above and below */
     border: 2px solid #f1f1f1;
 }
 
@@ -46,7 +47,6 @@ header .info {
 
 .nav-buttons {
     display: flex;
-    justify-content: flex-end; /* Align to the right */
     gap: 10px; /* Adjust spacing between buttons */
     margin: 0; /* Remove margins */
     order: 2; /* Ensure it stays on the right */
@@ -163,9 +163,6 @@ footer {
 }
 
 .search-bar {
-    position: absolute; /* Place it independently */
-    top: 10px; /* Slightly below the top */
-    left: 10px; /* Align to the far left */
     display: flex;
     align-items: center;
     padding: 0; /* Remove extra padding */
