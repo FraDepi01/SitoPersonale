@@ -15,6 +15,11 @@ header {
     font-family: 'Roboto', sans-serif;
 }
 
+header p {
+    font-size: 1.5rem; /* Increase font size */
+    font-family: 'Dancing Script', cursive; /* Apply artistic font */
+}
+
 .profile-pic {
     width: 120px;
     height: 120px;
