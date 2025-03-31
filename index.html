@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphic Designer - Il tuo Nome</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
 </head>
 <body>
-    <header style="background-color: #ff5722; text-align: center; padding: 20px 20px; position: relative;">
-        <div class="search-bar" style="text-align: center; margin-bottom: 10px; position: relative; z-index: 10;">
-            <form action="#" method="get" style="display: inline-block; position: relative; max-width: 300px; width: 100%;">
-                <input type="text" name="q" placeholder="Cerca..." 
-                    style="width: 100%; padding: 5px; border: 1px solid #ccc; border-radius: 3px; font-size: 14px; box-sizing: border-box; background-color: #ffffff; color: #333333;">
-                <button type="submit" 
-                    style="position: absolute; right: 0; top: 0; height: 100%; background-color: #ff5722; color: #ffffff; border: none; padding: 0 10px; border-radius: 0 3px 3px 0; cursor: pointer; font-size: 14px;">
-                    Cerca
-                </button>
+    <header>
+        <div class="search-bar">
+            <form action="#" method="get">
+                <input type="text" name="q" placeholder="Cerca...">
+                <button type="submit">Cerca</button>
             </form>
         </div>
         <img src="FotoCV-min.jpg" alt="Francesco De Pinto" class="profile-pic">
@@ -33,42 +28,39 @@
     </div>
     <section id="about">
         <h2>Chi Sono</h2>
-        <p style="margin-bottom: 5px;">Sono un graphic designer con una forte passione per la comunicazione visiva e il branding. Mi dedico a creare identità visive, loghi e materiali grafici che aiutano aziende e professionisti a distinguersi. Ogni progetto nasce da ricerca e creatività, per trasformare idee in design efficaci e memorabili.</p>
-        <p style="margin-top: 5px;">Hai un progetto in mente? Parliamone!</p>
+        <p>Sono un graphic designer con una forte passione per la comunicazione visiva e il branding...</p>
+        <p>Hai un progetto in mente? Parliamone!</p>
     </section>
-    <section id="portfolio" style="padding: 20px; background-color: #f1f1f1; text-align: center;">
-        <h2 style="color: #ff5722; margin-bottom: 20px;">Portfolio</h2>
-        <div class="portfolio-gallery" style="display: flex; overflow-x: auto; gap: 20px; padding: 10px; scrollbar-width: thin;">
-            <div class="portfolio-item" style="flex: 0 0 auto; width: 200px; text-align: center; transition: transform 0.3s ease;">
-                <a href="De Pinto Francesco - Presentazione Packaging Cholula.pdf" target="_blank" style="text-decoration: none;">
-                    <img src="bottle FINALE edited.png" alt="Packaging salsa piccante" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                    <p style="margin-top: 10px; font-size: 16px; color: #333333;">Packaging Salsa piccante</p>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">
+                <a href="De Pinto Francesco - Presentazione Packaging Cholula.pdf" target="_blank">
+                    <img src="bottle FINALE edited.png" alt="Packaging salsa piccante">
+                    <p>Packaging Salsa piccante</p>
                 </a>
             </div>
-            <div class="portfolio-item" style="flex: 0 0 auto; width: 200px; text-align: center; transition: transform 0.3s ease;">
-                <a href="De_Pinto_Francesco_CartaCreativa.pdf" target="_blank" style="text-decoration: none;">
-                    <img src="De_Pinto_Francesco_CartaCreativa.png" alt="Poster CR7" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                    <p style="margin-top: 10px; font-size: 16px; color: #333333;">Poster CR7</p>
+            <div class="portfolio-item">
+                <a href="De_Pinto_Francesco_CartaCreativa.pdf" target="_blank">
+                    <img src="De_Pinto_Francesco_CartaCreativa.png" alt="Poster CR7">
+                    <p>Poster CR7</p>
                 </a>
             </div>
-            <div class="portfolio-item" style="flex: 0 0 auto; width: 200px; text-align: center; transition: transform 0.3s ease;">
-                <a href="De Pinto Francesco - Presentazione Alsp.pdf" target="_blank" style="text-decoration: none;">
-                    <img src="Screenshot 2025-03-31 104216.png" alt="ALSP" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                    <p style="margin-top: 10px; font-size: 16px; color: #333333;">Rebrand ALSP</p>
+            <div class="portfolio-item">
+                <a href="De Pinto Francesco - Presentazione Alsp.pdf" target="_blank">
+                    <img src="Screenshot 2025-03-31 104216.png" alt="ALSP">
+                    <p>Rebrand ALSP</p>
                 </a>
             </div>
         </div>
     </section>
-    <section id="services" style="text-align: center; position: relative; margin-top: 40px;">
-        <h2 style="color: #ff5722; margin-bottom: 20px; background-color: #f1f1f1; display: inline-block; padding: 5px 15px; border-radius: 5px;">
-            I Miei Servizi
-        </h2>
-        <br>
-        <div style="background-color: #ff5722; color: #f1f1f1; padding: 15px 20px; border-radius: 5px; display: inline-block; margin-top: 10px;">
-            <ul class="centered-list" style="list-style: none; color: #f1f1f1; padding: 0; margin: 0; line-height: 1.5;">
-                <li style="margin: 8px 0; font-size: 18px; font-weight: bold;">Branding & Identità Visiva</li>
-                <li style="margin: 8px 0; font-size: 18px; font-weight: bold;">Grafica Editoriale</li>
-                <li style="margin: 8px 0; font-size: 18px; font-weight: bold;">Comunicazione Visiva</li>
+    <section id="services">
+        <h2>I Miei Servizi</h2>
+        <div>
+            <ul class="centered-list">
+                <li>Branding & Identità Visiva</li>
+                <li>Grafica Editoriale</li>
+                <li>Comunicazione Visiva</li>
             </ul>
         </div>
     </section>
