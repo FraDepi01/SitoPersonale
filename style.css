@@ -12,7 +12,7 @@ header {
     flex-direction: column; /* Stack elements vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    padding: 20px 20px; /* Reduce padding to minimize the red rectangle */
+    padding: 60px 20px; /* Increase padding to move content further down */
     background-color: #ff5722;
     position: sticky;
     top: 0;
@@ -23,7 +23,7 @@ header {
 }
 
 header p {
-    margin-top: 5px; /* Add minimal space between name and "Graphic Designer" */
+    margin-top: 2px; /* Minimize space between name and "Graphic Designer" */
     font-size: 1.2rem; /* Optionally reduce font size for better alignment */
     font-family: 'Dancing Script', cursive; /* Apply artistic font */
 }
@@ -33,7 +33,7 @@ header p {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 5px auto; /* Reduce margin */
+    margin: 10px auto; /* Slightly increase margin for better spacing */
     display: block;
     border: 3px solid #f1f1f1;
 }
