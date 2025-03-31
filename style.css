@@ -12,9 +12,11 @@ header {
     justify-content: space-between; /* Space out elements */
     align-items: center; /* Align items vertically */
     padding: 5px 20px; /* Adjust padding */
-    background-color: #ff5722;
-    text-align: center;
-    margin-bottom: 10px; /* Add slight margin below header */
+    background-color: #ff5722; /* Red background */
+    position: sticky; /* Keep header at the top */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other elements */
+    margin-bottom: 0; /* Remove bottom margin */
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
 }
@@ -36,9 +38,9 @@ header p {
 
 .nav-buttons {
     display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
+    justify-content: flex-end; /* Align to the right */
     gap: 10px; /* Adjust spacing between buttons */
-    margin: 0; /* Remove top margin */
+    margin: 0; /* Remove margins */
     order: 2; /* Ensure it stays on the right */
 }
 
@@ -154,9 +156,9 @@ footer {
 
 .search-bar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align to the left */
     align-items: center;
-    margin: 0; /* Remove bottom margin */
+    margin: 0; /* Remove margins */
     order: 1; /* Ensure it stays on the left */
 }
 
