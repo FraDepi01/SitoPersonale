@@ -9,10 +9,9 @@ body {
 
 header {
     display: flex;
-    flex-direction: row; /* Align elements side by side */
-    justify-content: space-between; /* Space out content */
-    align-items: center; /* Center content vertically */
-    padding: 5px 10px; /* Minimize padding for a smaller header */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align image and name */
+    padding: 10px 20px; /* Adjust padding */
     background-color: #ff5722;
     position: sticky;
     top: 0;
@@ -25,23 +24,22 @@ header {
 
 header p {
     margin: 0; /* Remove extra spacing */
-    font-size: 0.9rem; /* Reduce font size */
+    font-size: 1rem; /* Adjust font size */
     font-family: 'Dancing Script', cursive;
 }
 
 .profile-pic {
-    width: 50px; /* Reduce size of the profile picture */
-    height: 50px;
+    width: 60px; /* Adjust size of the profile picture */
+    height: 60px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0; /* Remove margin */
+    margin: 10px 0; /* Add spacing above and below */
     border: 2px solid #f1f1f1;
 }
 
 header .info {
-    display: flex;
-    flex-direction: column; /* Stack name and profession vertically */
-    margin-left: 10px; /* Add spacing between image and text */
+    text-align: center; /* Center-align text */
+    margin-top: 5px; /* Add slight spacing below the image */
 }
 
 .nav-buttons {
@@ -163,9 +161,10 @@ footer {
 }
 
 .search-bar {
-    flex: 1; /* Allow the search bar to take remaining space */
+    position: absolute; /* Place it independently */
+    top: 10px; /* Slightly below the top */
+    left: 10px; /* Align to the far left */
     display: flex;
-    justify-content: flex-end; /* Align search bar to the right */
     align-items: center;
     padding: 0; /* Remove extra padding */
     margin: 0; /* Remove margins */
