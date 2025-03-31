@@ -233,3 +233,11 @@ footer {
     color: #ff5722; /* Match the theme color */
     font-family: 'Roboto', sans-serif; /* Use consistent font */
 }
+
+p {
+    border: 2px solid #ff9800; /* Add a 2px border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Add padding inside the border */
+    margin: 10px 0; /* Add spacing between paragraphs */
+    background-color: #ffffff; /* Optional: Add a background color */
+}
