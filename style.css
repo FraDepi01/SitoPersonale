@@ -28,7 +28,7 @@ header h2 {
     font-size: 1.2rem; /* Adjust font size */
     text-align: center; /* Center-align the text */
     position: absolute; /* Position it relative to the header */
-    top: 20px; /* Align it with the search bar */
+    top: 30px; /* Lower the text by 10px */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     color: #f1f1f1; /* Change text color */
