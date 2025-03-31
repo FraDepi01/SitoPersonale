@@ -166,6 +166,7 @@ footer {
 .search-bar {
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* Align search bar to the left */
     padding: 0; /* Remove extra padding */
     margin: 0; /* Remove margins */
 }
