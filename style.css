@@ -202,7 +202,6 @@ footer p {
     border: none; /* Remove the border around the search bar */
     border-radius: 8px; /* Rounded corners for a softer look */
     padding: 10px; /* Add padding inside the border */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .search-bar form {
