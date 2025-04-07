@@ -158,7 +158,9 @@ button:hover {
 }
 
 footer {
-    background-color: #333333;
+    background-color: transparent; /* Remove white background */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Ensure no margin issues */
     text-align: center;
     padding: 5px 20px;
     font-size: 12px;
