@@ -130,12 +130,17 @@ h2 {
     text-decoration: underline; /* Optional: Add underline on hover */
 }
 
+p, form input, form textarea, .search-bar input {
+    border: 1px solid #ccc; /* Add a light gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Add padding inside the border */
+}
+
 form input, form textarea {
     display: block;
     width: 80%;
     max-width: 500px;
     margin: 10px auto;
-    padding: 10px;
     background-color: transparent; /* Remove white background */
     color: #333333;
     border: none; /* Remove orange border */
@@ -166,6 +171,10 @@ footer {
     font-size: 12px;
     color: #ffffff;
     font-family: 'Roboto', sans-serif; /* Remove white rectangle background */
+}
+
+footer p {
+    border: none; /* Exclude footer text from having a border */
 }
 
 .centered-list {
