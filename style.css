@@ -187,6 +187,9 @@ footer p {
 .centered-list li {
     margin: 10px 0;
     color: #f1f1f1;
+    text-transform: uppercase; /* Make text uppercase */
+    font-weight: bold; /* Make text bold */
+    color: #000000; /* Change text color to black */
 }
 
 .search-bar {
