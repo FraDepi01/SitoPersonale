@@ -311,9 +311,9 @@ p {
 }
 
 .full-width-image img {
-    width: 150vw; /* Full viewport width */
+    width: 110vw; /* Full viewport width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline spacing */
-    margin: 0; /* Remove default margins */
-    position: relative; /* Ensure it spans the full width */
+    margin: 0 auto; /* Center-align the image horizontally */
+    position: static; /* Ensure it stays in the normal flow */
 }
