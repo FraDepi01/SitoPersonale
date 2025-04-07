@@ -136,7 +136,7 @@ form input, form textarea {
     max-width: 500px;
     margin: 10px auto;
     padding: 10px;
-    background-color: #ffffff;
+    background-color: transparent; /* Remove white background */
     color: #333333;
     border: 2px solid #ff9800;
     border-radius: 5px;
@@ -201,7 +201,7 @@ footer {
     border: 1px solid #ccc;
     border-radius: 3px;
     font-size: 14px;
-    background-color: #ffffff;
+    background-color: transparent; /* Remove white background */
     color: #333333;
 }
 
@@ -219,7 +219,7 @@ footer {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.search-bar button:hover {
+search-bar button:hover {
     background-color: #e64a19;
     transform: scale(1.1);
 }
@@ -241,7 +241,7 @@ p {
     border-radius: 5px; /* Rounded corners */
     padding: 10px; /* Add padding inside the border */
     margin: 10px 0; /* Add spacing between paragraphs */
-    background-color: #ffffff; /* Optional: Add a background color */
+    background-color: transparent; /* Remove white background */
 }
 
 .minimal-footer {
