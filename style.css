@@ -196,7 +196,7 @@ footer p {
     margin: 20px; /* Add spacing around the search bar */
     position: absolute; /* Ensure it stays at the left edge */
     left: 0; /* Align to the left of the page */
-    border: 2px solid #ff9800; /* Add an orange border to match the theme */
+    border: none; /* Remove the border around the search bar */
     border-radius: 8px; /* Rounded corners for a softer look */
     padding: 10px; /* Add padding inside the border */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
