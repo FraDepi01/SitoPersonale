@@ -98,8 +98,8 @@ h2 {
 .portfolio-gallery {
     display: flex;
     overflow-x: auto;
-    gap: 20px;
-    padding: 10px;
+    gap: 10px;
+    padding: 5px;
     scrollbar-width: thin;
 }
 
@@ -131,7 +131,7 @@ h2 {
 }
 
 p, form input, form textarea, .search-bar {
-    border: 2px solid #ff5722;
+    border: 2px solid #f1f1f1;
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
