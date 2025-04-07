@@ -190,6 +190,12 @@ footer p {
     text-transform: uppercase; /* Make text uppercase */
     font-weight: bold; /* Make text bold */
     color: #000000; /* Change text color to black */
+    padding: 10px; /* Add padding inside the rectangle */
+    background-color: #ff9800; /* Orange background */
+    color: #ffffff; /* White text */
+    border-radius: 8px; /* Rounded corners */
+    font-weight: bold; /* Make text bold */
+    text-transform: uppercase; /* Make text uppercase */
 }
 
 .search-bar {
@@ -267,4 +273,9 @@ p {
     color: #f1f1f1; /* Light text color */
     font-family: 'Roboto', sans-serif; /* Consistent font */
     border-top: none; /* Remove the top border */
+}
+
+#services {
+    margin-top: 20px; /* Add spacing above the section */
+    text-align: center; /* Center-align the content */
 }
