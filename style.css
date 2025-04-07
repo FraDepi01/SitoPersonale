@@ -241,3 +241,13 @@ p {
     margin: 10px 0; /* Add spacing between paragraphs */
     background-color: #ffffff; /* Optional: Add a background color */
 }
+
+.minimal-footer {
+    text-align: center; /* Center-align the text */
+    padding: 5px 10px; /* Minimal padding */
+    font-size: 0.8rem; /* Small font size */
+    background-color: #333333; /* Harmonious dark background */
+    color: #f1f1f1; /* Light text color */
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    border-top: 1px solid #555555; /* Subtle top border for separation */
+}
