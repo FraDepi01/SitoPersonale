@@ -250,9 +250,35 @@ search-bar button:hover {
 .main-title {
     text-align: center;
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: 4rem; /* Double the size */
     color: #ff5722;
     font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide overflow */
+}
+
+.main-title::before,
+.main-title::after {
+    content: "FRADEPI FRADEPI FRADEPI "; /* Repeat outlined text */
+    position: absolute;
+    top: 0;
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: 2px #ff5722; /* Add an orange outline */
+    font-size: 4rem; /* Match the size of the original text */
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+}
+
+.main-title::before {
+    left: -100%; /* Start from the left edge */
+    transform: translateX(-100%); /* Extend to the left */
+}
+
+.main-title::after {
+    right: -100%; /* Start from the right edge */
+    transform: translateX(100%); /* Extend to the right */
 }
 
 p {
