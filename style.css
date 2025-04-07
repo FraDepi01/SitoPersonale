@@ -130,10 +130,11 @@ h2 {
     text-decoration: underline; /* Optional: Add underline on hover */
 }
 
-p, form input, form textarea, .search-bar input {
-    border: 1px solid #ccc; /* Add a light gray border */
-    border-radius: 5px; /* Rounded corners */
+p, form input, form textarea, .search-bar {
+    border: 2px solid #ff9800; /* Add an orange border to match the theme */
+    border-radius: 8px; /* Rounded corners for a softer look */
     padding: 10px; /* Add padding inside the border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 form input, form textarea {
@@ -192,10 +193,13 @@ footer p {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Fully align the search bar to the left */
-    padding: 0; /* Remove extra padding */
-    margin: 20px; /* Remove margins */
+    margin: 20px; /* Add spacing around the search bar */
     position: absolute; /* Ensure it stays at the left edge */
     left: 0; /* Align to the left of the page */
+    border: 2px solid #ff9800; /* Add an orange border to match the theme */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    padding: 10px; /* Add padding inside the border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .search-bar form {
