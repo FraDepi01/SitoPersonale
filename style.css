@@ -138,7 +138,7 @@ form input, form textarea {
     padding: 10px;
     background-color: transparent; /* Remove white background */
     color: #333333;
-    border: 2px solid #ff9800;
+    border: none; /* Remove orange border */
     border-radius: 5px;
 }
 
@@ -198,7 +198,7 @@ footer {
 .search-bar input {
     width: 250px;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: none; /* Remove orange border */
     border-radius: 3px;
     font-size: 14px;
     background-color: transparent; /* Remove white background */
@@ -237,7 +237,7 @@ search-bar button:hover {
 }
 
 p {
-    border: 2px solid #ff9800; /* Add a 2px border */
+    border: none; /* Remove orange border */
     border-radius: 5px; /* Rounded corners */
     padding: 10px; /* Add padding inside the border */
     margin: 10px 0; /* Add spacing between paragraphs */
