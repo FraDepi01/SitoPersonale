@@ -251,5 +251,5 @@ p {
     background-color: #333333; /* Harmonious dark background */
     color: #f1f1f1; /* Light text color */
     font-family: 'Roboto', sans-serif; /* Consistent font */
-    border-top: 1px solid #555555; /* Subtle top border for separation */
+    border-top: none; /* Remove the top border */
 }
