@@ -315,5 +315,5 @@ p {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline spacing */
     margin: 0 auto; /* Center-align the image horizontally */
-    position: static; /* Ensure it stays in the normal flow */
+    position: relative; /* Ensure it stays in the normal flow */
 }
