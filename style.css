@@ -250,13 +250,14 @@ search-bar button:hover {
 .main-title {
     text-align: center;
     margin-top: 20px;
-    font-size: 4rem; /* Double the size */
-    color: #ff5722;
+    font-size: 4rem;
+    color: transparent; /* Make the text transparent */
+    -webkit-text-stroke: 1px #ff5722; /* Add a fine orange outline */
     font-family: 'Roboto', sans-serif;
     display: inline-block;
     position: relative;
-    white-space: nowrap; /* Prevent wrapping */
-    overflow: hidden; /* Hide overflow */
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .main-title::before,
