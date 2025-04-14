@@ -43,7 +43,8 @@ header h2 {
     border: 2px solid #f1f1f1;
     float: left; /* Align the photo to the left */
     margin-right: 15px; /* Add spacing to the right of the photo */
-    margin-top: 10px; /* Optional: Add spacing above the photo */
+    margin-top: 0; /* Remove any top margin */
+    margin-left: 10px; /* Add spacing to the left of the photo */
 }
 
 header h3 {
