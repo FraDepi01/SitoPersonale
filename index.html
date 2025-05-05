@@ -42,30 +42,30 @@
         <h2>Portfolio</h2>
         <div class="portfolio-gallery">
             <div class="portfolio-item">
-                <a href="javascript:void(0)" onclick="openPdfPopup('bottle FINALE edited.png', 'Packaging Salsa')">
+                <a href="javascript:void(0)" onclick="openImagePopup('bottle FINALE edited.png', 'Packaging Salsa')">
                     <img src="bottle FINALE edited.png" alt="Packaging salsa piccante">
                     <p>Packaging Salsa</p>
                 </a>
             </div>
             <div class="portfolio-item">
-                <a href="javascript:void(0)" onclick="openPdfPopup('De_Pinto_Francesco_CartaCreativa.png', 'Poster CR7')">
+                <a href="javascript:void(0)" onclick="openImagePopup('De_Pinto_Francesco_CartaCreativa.png', 'Poster CR7')">
                     <img src="De_Pinto_Francesco_CartaCreativa.png" alt="Poster CR7">
                     <p>Poster CR7</p>
                 </a>
             </div>
             <div class="portfolio-item">
-                <a href="javascript:void(0)" onclick="openPdfPopup('Screenshot 2025-03-31 104216.png', 'Rebrand ALSP')">
+                <a href="javascript:void(0)" onclick="openImagePopup('Screenshot 2025-03-31 104216.png', 'Rebrand ALSP')">
                     <img src="Screenshot 2025-03-31 104216.png" alt="ALSP">
                     <p>Rebrand ALSP</p>
                 </a>
             </div>
         </div>
     </section>
-    <div id="pdf-popup" class="popup">
+    <div id="image-popup" class="popup">
         <div class="popup-content">
-            <button class="close-popup" onclick="closePdfPopup()">&times;</button>
+            <button class="close-popup" onclick="closeImagePopup()">&times;</button>
             <h3 id="popup-title"></h3>
-            <iframe id="popup-iframe" src="" frameborder="0"></iframe>
+            <img id="popup-image" src="" alt="Popup Image">
         </div>
     </div>
     <section id="contact">

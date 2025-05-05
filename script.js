@@ -59,4 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
         pdfPopup.style.display = 'none'; // Nascondi il popup
         popupIframe.src = ''; // Resetta il contenuto
     };
+
+    // Gestione popup immagini
+    const imagePopup = document.getElementById('image-popup');
+    const popupImage = document.getElementById('popup-image');
+
+    window.openImagePopup = (imagePath, title) => {
+        popupTitle.textContent = title;
+        popupImage.src = imagePath;
+        imagePopup.style.display = 'flex'; // Mostra il popup
+    };
+
+    window.closeImagePopup = () => {
+        imagePopup.style.display = 'none'; // Nascondi il popup
+        popupImage.src = ''; // Resetta l'immagine
+    };
 });

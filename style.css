@@ -466,3 +466,17 @@ h1 .calligraphic {
     color: #e64a19;
     transform: scale(1.1);
 }
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
