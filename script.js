@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.openPopup = (src) => {
         popupImg.src = src;
-        popup.style.display = 'block';
+        popup.style.display = 'flex'; // Mostra il popup
     };
 
     window.closePopup = () => {
-        popup.style.display = 'none';
-        popupImg.src = '';
+        popup.style.display = 'none'; // Nascondi il popup
+        popupImg.src = ''; // Resetta l'immagine
     };
 });
