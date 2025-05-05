@@ -40,32 +40,43 @@
     </section>
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <div class="portfolio-gallery">
-            <div class="portfolio-item">
-                <a href="javascript:void(0)" onclick="openImagePopup('bottle FINALE edited.png', 'Packaging Salsa')">
+        <div class="carousel">
+            <button class="carousel-arrow left-arrow" onclick="scrollCarousel(-1)">&lt;</button>
+            <div class="carousel-track">
+                <div class="carousel-item" onclick="openProjectPopup('bottle FINALE edited.png', 'Packaging Salsa', 'Un design unico per il packaging di una salsa piccante.')">
                     <img src="bottle FINALE edited.png" alt="Packaging salsa piccante">
                     <p>Packaging Salsa</p>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="javascript:void(0)" onclick="openImagePopup('De_Pinto_Francesco_CartaCreativa.png', 'Poster CR7')">
+                </div>
+                <div class="carousel-item" onclick="openProjectPopup('De_Pinto_Francesco_CartaCreativa.png', 'Poster CR7', 'Poster creativo dedicato a Cristiano Ronaldo.')">
                     <img src="De_Pinto_Francesco_CartaCreativa.png" alt="Poster CR7">
                     <p>Poster CR7</p>
-                </a>
-            </div>
-            <div class="portfolio-item">
-                <a href="javascript:void(0)" onclick="openImagePopup('Screenshot 2025-03-31 104216.png', 'Rebrand ALSP')">
+                </div>
+                <div class="carousel-item" onclick="openProjectPopup('Screenshot 2025-03-31 104216.png', 'Rebrand ALSP', 'Rebranding completo per il marchio ALSP.')">
                     <img src="Screenshot 2025-03-31 104216.png" alt="ALSP">
                     <p>Rebrand ALSP</p>
-                </a>
+                </div>
+                <div class="carousel-item" onclick="openProjectPopup('project4.png', 'Progetto 4', 'Descrizione fittizia per il progetto 4.')">
+                    <img src="Packaging Brexidol.jpg" alt="Brexidol">
+                    <p>Riprogettazione del packaging "Brexidol"</p>
+                </div>
+                <div class="carousel-item" onclick="openProjectPopup('project5.png', 'Progetto 5', 'Descrizione fittizia per il progetto 5.')">
+                    <img src="Infografica Pogba.jpg" alt="Poster Pogba">
+                    <p>Poster Pogba 12/16</p>
+                </div>
             </div>
+            <button class="carousel-arrow right-arrow" onclick="scrollCarousel(1)">&gt;</button>
         </div>
     </section>
-    <div id="image-popup" class="popup">
+    <div id="project-popup" class="popup">
         <div class="popup-content">
-            <button class="close-popup" onclick="closeImagePopup()">&times;</button>
-            <h3 id="popup-title"></h3>
-            <img id="popup-image" src="" alt="Popup Image">
+            <button class="close-popup" onclick="closeProjectPopup()">&times;</button>
+            <button class="popup-arrow left-arrow" onclick="navigateProject(-1)">&lt;</button>
+            <div class="popup-body">
+                <h3 id="popup-title"></h3>
+                <img id="popup-image" src="" alt="Popup Image">
+                <p id="popup-description" class="popup-description"></p>
+            </div>
+            <button class="popup-arrow right-arrow" onclick="navigateProject(1)">&gt;</button>
         </div>
     </div>
     <section id="contact">
@@ -80,5 +91,55 @@
     <footer class="minimal-footer">
         <p>&copy; 2025 Francesco De Pinto. Tutti i diritti riservati.</p>
     </footer>
+    <script>
+        const projects = [
+            {
+                image: 'bottle FINALE edited.png',
+                title: 'Packaging Salsa',
+                description: 'Un design unico per il packaging di una salsa piccante.'
+            },
+            {
+                image: 'De_Pinto_Francesco_CartaCreativa.png',
+                title: 'Poster CR7',
+                description: 'Poster creativo dedicato a Cristiano Ronaldo.'
+            },
+            {
+                image: 'Screenshot 2025-03-31 104216.png',
+                title: 'Rebrand ALSP',
+                description: 'Rebranding completo per il marchio ALSP.'
+            },
+            {
+                image: 'Packaging Brexidol.jpg',
+                title: 'Riprogettazione del packaging "Brexidol"',
+                description: 'Descrizione fittizia per il progetto 4.'
+            },
+            {
+                image: 'Infografica Pogba.jpg',
+                title: 'Poster Pogba 12/16',
+                description: 'Descrizione fittizia per il progetto 5.'
+            }
+        ];
+
+        let currentProjectIndex = 0;
+
+        function openProjectPopup(image, title, description) {
+            const popup = document.getElementById('project-popup');
+            document.getElementById('popup-image').src = image;
+            document.getElementById('popup-title').textContent = title;
+            document.getElementById('popup-description').textContent = description;
+            popup.style.display = 'block';
+            currentProjectIndex = projects.findIndex(project => project.image === image);
+        }
+
+        function closeProjectPopup() {
+            document.getElementById('project-popup').style.display = 'none';
+        }
+
+        function navigateProject(direction) {
+            currentProjectIndex = (currentProjectIndex + direction + projects.length) % projects.length;
+            const project = projects[currentProjectIndex];
+            openProjectPopup(project.image, project.title, project.description);
+        }
+    </script>
 </body>
 </html>
