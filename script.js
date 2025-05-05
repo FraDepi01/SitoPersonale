@@ -18,6 +18,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupIframe = document.getElementById('popup-iframe');
     const popupTitle = document.getElementById('popup-title');
     const closePopupButton = document.querySelector('.close-popup');
+    const imagePopup = document.getElementById('image-popup');
+    const popupImage = document.getElementById('popup-image');
+
+    const openPopup = (type, contentPath, title) => {
+        popupTitle.textContent = title;
+        if (type === 'pdf') {
+            popupIframe.src = contentPath;
+            popup.classList.add('visible');
+        } else if (type === 'image') {
+            popupImage.src = contentPath;
+            imagePopup.style.display = 'flex';
+        }
+    };
+
+    const closePopup = (type) => {
+        if (type === 'pdf') {
+            popup.classList.remove('visible');
+            popupIframe.src = ''; // Clear the iframe source
+        } else if (type === 'image') {
+            imagePopup.style.display = 'none';
+            popupImage.src = ''; // Clear the image source
+        }
+    };
 
     if (pdfLinks && popup && popupIframe && popupTitle && closePopupButton) {
         pdfLinks.forEach(link => {
@@ -25,53 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 event.preventDefault();
                 const pdfUrl = link.getAttribute('href');
                 const title = link.getAttribute('data-title');
-                popupIframe.src = pdfUrl;
-                popupTitle.textContent = title;
-                popup.classList.add('visible');
+                openPopup('pdf', pdfUrl, title);
             });
         });
 
-        closePopupButton.addEventListener('click', () => {
-            popup.classList.remove('visible');
-            popupIframe.src = ''; // Clear the iframe source
-        });
+        closePopupButton.addEventListener('click', () => closePopup('pdf'));
 
         popup.addEventListener('click', (event) => {
-            if (event.target === popup) {
-                popup.classList.remove('visible');
-                popupIframe.src = ''; // Clear the iframe source
-            }
+            if (event.target === popup) closePopup('pdf');
         });
     }
 
-    // Gestione popup PDF
-    const pdfPopup = document.getElementById('pdf-popup');
-    const popupTitle = document.getElementById('popup-title');
-    const popupIframe = document.getElementById('popup-iframe');
-
-    window.openPdfPopup = (filePath, title) => {
-        popupTitle.textContent = title;
-        popupIframe.src = filePath;
-        pdfPopup.style.display = 'flex'; // Mostra il popup
-    };
-
-    window.closePdfPopup = () => {
-        pdfPopup.style.display = 'none'; // Nascondi il popup
-        popupIframe.src = ''; // Resetta il contenuto
-    };
-
-    // Gestione popup immagini
-    const imagePopup = document.getElementById('image-popup');
-    const popupImage = document.getElementById('popup-image');
-
-    window.openImagePopup = (imagePath, title) => {
-        popupTitle.textContent = title;
-        popupImage.src = imagePath;
-        imagePopup.style.display = 'flex'; // Mostra il popup
-    };
-
-    window.closeImagePopup = () => {
-        imagePopup.style.display = 'none'; // Nascondi il popup
-        popupImage.src = ''; // Resetta l'immagine
-    };
+    window.openPdfPopup = (filePath, title) => openPopup('pdf', filePath, title);
+    window.closePdfPopup = () => closePopup('pdf');
+    window.openImagePopup = (imagePath, title) => openPopup('image', imagePath, title);
+    window.closeImagePopup = () => closePopup('image');
 });
