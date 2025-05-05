@@ -10,18 +10,18 @@ document.addEventListener('DOMContentLoaded', () => {
     rightArrow.addEventListener('click', () => {
         gallery.scrollBy({ left: 200, behavior: 'smooth' }); // Scroll right
     });
+
+    // Gestione popup
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+
+    window.openPopup = (src) => {
+        popupImg.src = src;
+        popup.style.display = 'block';
+    };
+
+    window.closePopup = () => {
+        popup.style.display = 'none';
+        popupImg.src = '';
+    };
 });
-
-<script>
-    function openPopup(imageSrc) {
-        const popup = document.getElementById('popup');
-        const popupImg = document.getElementById('popup-img');
-        popupImg.src = imageSrc; // Set the image source
-        popup.style.display = 'flex'; // Show the popup
-    }
-
-    function closePopup() {
-        const popup = document.getElementById('popup');
-        popup.style.display = 'none'; // Hide the popup
-    }
-</script>
