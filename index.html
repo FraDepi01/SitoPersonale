@@ -3,113 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphic Designer - Il tuo Nome</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #1e1e1e;
-            text-align: center;
-            padding: 20px;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
-        section {
-            padding: 40px;
-            text-align: center;
-        }
-        .gallery img {
-            width: 30%;
-            margin: 10px;
-            border-radius: 8px;
-        }
-        form input, form textarea {
-            display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #ffcc00;
-            color: #121212;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #1e1e1e;
-            text-align: center;
-            padding: 20px;
-        }
-    </style>
+    <title>FraDepi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div style="display: flex; align-items: center; justify-content: space-between;">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-pic" style="margin-left: 20px;">
-            <div>
-                <h1>FraDepi</h1>
-                <p>Graphic Designer</p>
-            </div>
+        <img src="FotoCV-min.jpg" alt="Francesco De Pinto" class="profile-pic">
+        <div class="nav-buttons">
+            <a href="#about">Chi Sono</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contatti</a>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">Chi Sono</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contatti</a></li>
-            </ul>
-        </nav>
     </header>
-    
-    <!-- Rimosso il rettangolo più piccolo -->
-    
+    <div class="full-width-image">
+        <img src="FRADEPIFRADEPI.png" alt="Banner">
+    </div>
+    <h1>SPICCA TRA I COMPETITOR <br> CON UN DESIGN <span class="calligraphic">UNICO</span></h1>
     <section id="about">
         <h2>Chi Sono</h2>
-        <p>Breve descrizione della tua esperienza e competenze nel design.</p>
+        <p>Sono un graphic designer, cosa faccio? <br/> Partiamo dal presupposto che la comunicazione in quanto brand è fondamentale e può influire sul successo o fallimento, a prescindere dalla qualità del prodotto. <br/> Quindi perchè rischiare? Perchè non affidarsi a chi lo fa di lavoro? <br/> Sono qui per questo, è da anni ormai che mi occupo di grafica, dal 3D a tutta l'identità visiva integrata di aziende e privati, completa il forum infondo per non rimanere indietro, mi raccomando</p>
+        <p>Hai un progetto in mente? Parliamone!</p>
     </section>
-    
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="gallery">
-            <a href="javascript:void(0)" onclick="openPopup('img1.jpg')">
-                <img src="img1.jpg" alt="Progetto 1">
-            </a>
-            <a href="javascript:void(0)" onclick="openPopup('img2.jpg')">
-                <img src="img2.jpg" alt="Progetto 2">
-            </a>
-            <a href="javascript:void(0)" onclick="openPopup('img3.jpg')">
-                <img src="img3.jpg" alt="Progetto 3">
-            </a>
+    <section id="services">
+        <h2>I Miei Servizi</h2>
+        <div>
+            <ul class="centered-list">
+                <li>Branding e Identità</li>
+                <li>Grafica Editoriale e 3D</li>
+                <li>Comunicazione Visiva</li>
+            </ul>
         </div>
     </section>
-
-    <!-- Popup container -->
-    <div id="popup" class="popup">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <img id="popup-img" src="" alt="Popup Image">
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">
+                <a href="bottle FINALE edited.png" class="pdf-link" data-title="Packaging Salsa">
+                    <img src="bottle FINALE edited.png" alt="Packaging salsa piccante">
+                    <p>Packaging Salsa</p>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="De_Pinto_Francesco_CartaCreativa.png" class="pdf-link" data-title="Poster CR7">
+                    <img src="De_Pinto_Francesco_CartaCreativa.png" alt="Poster CR7">
+                    <p>Poster CR7</p>
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="Screenshot 2025-03-31 104216.png" class="pdf-link" data-title="Rebrand ALSP">
+                    <img src="Screenshot 2025-03-31 104216.png" alt="ALSP">
+                    <p>Rebrand ALSP</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div id="pdf-popup">
+        <div class="popup-content">
+            <button class="close-popup">&times;</button>
+            <h3 id="popup-title"></h3>
+            <iframe id="popup-iframe" src="" frameborder="0"></iframe>
+        </div>
     </div>
-    
     <section id="contact">
         <h2>Contattami</h2>
         <form>
@@ -119,9 +77,8 @@
             <button type="submit">Invia</button>
         </form>
     </section>
-    
-    <footer>
-        <p>&copy; 2025 Il tuo Nome - Tutti i diritti riservati.</p>
+    <footer class="minimal-footer">
+        <p>&copy; 2025 Francesco De Pinto. Tutti i diritti riservati.</p>
     </footer>
 </body>
 </html>
