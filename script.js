@@ -100,22 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
         currentProjectIndex = index;
 
         const popup = document.getElementById('project-popup');
-        const popupContent = `
-            <div class="popup-content">
-                <button class="close-popup" onclick="closeProjectPopup()">&times;</button>
-                <div class="popup-title-container">
-                    <h3>${project.title}</h3>
-                </div>
-                <div class="popup-image-container">
-                    <img src="${project.image}" alt="Popup Image">
-                </div>
-                <div class="popup-description-container">
-                    <p>${project.description}</p>
-                </div>
-            </div>
+        popup.innerHTML = `
+            <img src="${project.image}" alt="${project.title}">
         `;
-
-        popup.innerHTML = popupContent;
 
         popup.style.display = 'flex'; // Ensure the popup is displayed
         setTimeout(() => {
