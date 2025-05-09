@@ -671,13 +671,13 @@ h1 .calligraphic {
     max-width: 90vw; /* Limit the maximum width relative to the viewport */
     height: auto; /* Adjust height dynamically */
     max-height: 90vh; /* Limit the maximum height relative to the viewport */
-    background-color: #ffffff; /* White background */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
+    background-color: transparent; /* Transparent background for the popup */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange content horizontally */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    gap: 20px; /* Add spacing between the image and the description */
     z-index: 1000; /* Ensure it appears above other elements */
-    overflow: hidden; /* Prevent content overflow */
-    justify-content: center;
-    align-items: center;
     opacity: 0; /* Start invisible */
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth animation */
 }
@@ -688,9 +688,9 @@ h1 .calligraphic {
 }
 
 #project-popup img {
-    width: 100%; /* Ensure the image fits within the popup width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 90vw; /* Ensure the image fits within the viewport width */
+    width: auto; /* Allow the width to adjust dynamically */
+    height: auto; /* Adjust height dynamically */
+    max-width: 60%; /* Ensure the image fits within the popup width */
     max-height: 90vh; /* Ensure the image fits within the viewport height */
     object-fit: contain; /* Ensure the entire image is visible */
     border-radius: 12px; /* Match the popup's rounded corners */
@@ -812,4 +812,8 @@ h1 .calligraphic {
 
 #project-popup {
     z-index: 1000; /* Ensure it appears above the overlay */
+}
+
+#project-popup .popup-description-box {
+    /* Remove all styles related to the project description box */
 }

@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const popup = document.getElementById('project-popup');
         popup.innerHTML = `
             <img src="${project.image}" alt="${project.title}">
-        `;
+        `; // Only display the project image
 
         popup.style.display = 'flex'; // Ensure the popup is displayed
         setTimeout(() => {
