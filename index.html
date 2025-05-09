@@ -24,33 +24,57 @@
             <a href="#contattititolo">Contattami</a>
         </nav>
     </div>
-    <div class="cover-image">
-        <img src="copertina.png" alt="Copertina" />
-    </div>
     <div class="container">
         <!-- Intestazione -->
         
 
         <!-- Contenuto principale -->
         <main>
-            <section>
-                <h1>Chi Sono</h1>
-                <p>
-                    Ciao! Sono FraDepi (o Francesco De Pinto se vogliamo rimanere formali)
-                    Graphic designer con una passione per l’estetica funzionale e la comunicazione visiva. Questo sito è il mio spazio personale: qui raccolgo i progetti a cui ho lavorato, condivido ciò che mi ispira e rendo semplice il modo per entrare in contatto con me.
-                    <br>
-                    <span class="exploration-text">Buona esplorazione!</span>
-                </p>
+            <section id="chi-sono">
+                <h2>Chi Sono</h2>
+                <!-- Contenuto vuoto per ora -->
             </section>
-            <section>
-                <h2>Progetti</h2>
-                <p>Qui puoi trovare i miei progetti più recenti.</p>
+
+            <section id="progetti">
+                <h2>Portfolio</h2>
+                <!-- Contenuto vuoto per ora -->
+            </section>
+
+            <section id="contattititolo">
+                <h2>Contattami</h2>
+                <form action="https://formsubmit.co/fradepidsgn@gmail.com" method="POST">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Messaggio:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Invia</button>
+                </form>
             </section>
         </main>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2024 Il Mio Nome. Tutti i diritti riservati.</p>
+            <div class="footer-background"></div> <!-- Space for footer background image -->
+            <div class="footer-minimal">
+                <a href="https://www.instagram.com/fradepi/" target="_blank" aria-label="Instagram">
+                    <img src="Instagram-01.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/3930047254" target="_blank" aria-label="WhatsApp">
+                    <img src="Whatsapp-01.png" alt="WhatsApp">
+                </a>
+                <a href="https://pin.it/ixDkaURHC" target="_blank" aria-label="Pinterest">
+                    <img src="Pinterest-01.png" alt="Pinterest">
+                </a>
+            </div>
+            <div class="footer-professional">
+                <p>&copy; 2024 Francesco De Pinto. Tutti i diritti riservati.</p>
+                <p>Contattami: <a href="mailto:fradepidsgn@gmail.com">fradepidsgn@gmail.com</a></p>
+            </div>
         </footer>
     </div>
 </body>
