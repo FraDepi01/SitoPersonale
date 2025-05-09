@@ -1,0 +1,175 @@
+/* ...existing code... */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Increased height */
+    background: linear-gradient(75deg, rgb(255, 255, 255) -60%, #000000 10%, #000000 90%, #ffffff 200%); /* Inclined gradient with white occupying 1/3 */
+    z-index: 1000; /* Ensure it stays above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align all content to the right */
+    color: #ffffff; /* White text color */
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    padding: 0 50px; /* Match the container's horizontal padding */
+    padding-right: 50px; /* Ensure consistent spacing on the right */
+    box-sizing: border-box; /* Include padding in the element's total width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+    gap: 20px; /* Add spacing between links */
+}
+
+.top-bar .logo {
+    position: absolute; /* Fix the logo to the left */
+    left: 50px; /* Maintain the same left margin */
+    top: 0px; /* Adjust the vertical alignment */
+    height: 70px; /* Adjust the size of the logo */
+}
+
+.top-bar a {
+    color: #ffffff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for shadow */
+    margin-left: 10px; /* Reduce spacing between links */
+}
+
+.top-bar a:hover {
+    color: #000000; /* Highlight color on hover */
+    text-shadow: 0px 0 6px rgb(255, 255, 255); /* Stronger and brighter white outer shadow on hover */
+}
+
+body {
+    padding-top: 70px; /* Adjust padding to match the top bar height */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1200px; /* Slightly increase the maximum width for the content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 0 50px; /* Add wider margins on the left and right */
+    box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+header, main, footer {
+    max-width: 1200px; /* Ensure all sections respect the container width */
+    margin: 0 auto; /* Center-align sections */
+    padding: 0 50px; /* Add wider margins on the left and right */
+    box-sizing: border-box; /* Include padding in the element's total width */
+}
+
+.exploration-text {
+    font-size: 1.5rem; /* Make the text larger */
+    font-weight: bold; /* Make the text bold */
+    margin-top: 10px; /* Add spacing above the text */
+}
+
+.cover-image img {
+    width: 100%; /* Occupy the full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below the image */
+}
+
+.burger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1100; /* Ensure it stays above the menu */
+    transition: transform 0.3s ease; /* Smooth animation for interaction */
+}
+
+.burger-menu.active {
+    transform: rotate(90deg); /* Rotate the burger menu when active */
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth animation for color and rotation */
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg); /* Top bar transforms into a cross */
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* Bottom bar transforms into a cross */
+}
+
+.menu-links {
+    display: flex; /* Show links by default on larger screens */
+    flex-direction: row; /* Arrange links in a row */
+    gap: 20px;
+    position: static; /* Remove absolute positioning */
+    background-color: transparent; /* No background for larger screens */
+    padding: 0; /* Remove padding */
+    opacity: 1; /* Ensure visibility */
+    visibility: visible; /* Ensure visibility */
+    max-height: none; /* Remove height restriction */
+    transition: none; /* Disable transitions for larger screens */
+}
+
+.menu-links.active {
+    opacity: 1; /* Make the menu visible */
+    visibility: visible; /* Show the menu */
+    max-height: 200px; /* Expand to show the menu */
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-wrap: wrap; /* Allow wrapping of content */
+        justify-content: center; /* Center-align content in mobile view */
+        padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+
+    .top-bar .logo {
+        position: static; /* Remove absolute positioning for better layout */
+        margin-bottom: 10px; /* Add spacing below the logo */
+        height: 50px; /* Reduce logo size */
+    }
+
+    .top-bar a {
+        font-size: 0.9rem; /* Reduce font size for links */
+        margin-left: 5px; /* Reduce spacing between links */
+        margin-right: 5px; /* Add consistent spacing on both sides */
+    }
+
+    .burger-menu {
+        display: flex; /* Show burger menu on small screens */
+    }
+
+    .menu-links {
+        display: flex; /* Hide links by default on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Position directly below the burger menu */
+        right: 0;
+        background-color: #000000;
+        padding: 10px;
+        gap: 10px;
+        z-index: 1000;
+        max-height: 0; /* Initially hidden */
+        overflow: hidden; /* Prevent content overflow */
+        opacity: 0; /* Make the menu invisible */
+        visibility: hidden; /* Hide the menu completely */
+        transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease; /* Smooth transition */
+    }
+
+    .menu-links.active {
+        max-height: 200px; /* Expand to show the menu */
+        opacity: 1; /* Make the menu visible */
+        visibility: visible; /* Show the menu */
+    }
+}
+/* ...existing code... */
