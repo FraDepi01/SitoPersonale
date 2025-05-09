@@ -71,20 +71,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const carouselTrack = document.querySelector('.carousel-track');
     const carouselItems = document.querySelectorAll('.carousel-item');
-    let currentIndex = 0;
-
-    const updateCarousel = () => {
-        const offset = -currentIndex * 100; // Calculate the offset in percentage
-        carouselTrack.style.transform = `translateX(${offset}%)`;
-    };
+    const itemWidth = carouselItems[0].offsetWidth + 10; // Include gap between items
+    let currentScrollPosition = 0;
 
     window.scrollCarousel = (direction) => {
-        const maxIndex = carouselItems.length - 1;
-        currentIndex = Math.min(Math.max(currentIndex + direction, 0), maxIndex);
-        updateCarousel();
-    };
+        const maxScroll = carouselTrack.scrollWidth - carouselTrack.offsetWidth;
 
-    updateCarousel(); // Initialize the carousel position
+        // Calculate the new scroll position
+        currentScrollPosition += direction * itemWidth;
+        currentScrollPosition = Math.max(0, Math.min(currentScrollPosition, maxScroll));
+
+        // Scroll the carousel
+        carouselTrack.scrollTo({ left: currentScrollPosition, behavior: 'smooth' });
+    };
 
     const projects = [
         { image: 'bottle FINALE edited.png', title: 'Packaging Salsa', description: 'Un design unico per il packaging di una salsa piccante.' },
@@ -96,51 +95,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentProjectIndex = 0;
 
-    window.openProjectPopup = (imagePath, title, description) => {
-        currentProjectIndex = projects.findIndex(project => project.image === imagePath);
-        updatePopupContent();
-        document.getElementById('project-popup').classList.add('visible');
+    window.openProjectPopup = (index) => {
+        const project = projects[index];
+        currentProjectIndex = index;
 
-        // Navigate the carousel to the selected project
-        const offset = -currentProjectIndex * 100; // Calculate the offset in percentage
-        carouselTrack.style.transform = `translateX(${offset}%)`;
-        currentIndex = currentProjectIndex; // Update the carousel index
+        const popup = document.getElementById('project-popup');
+        const popupContent = `
+            <div class="popup-content">
+                <button class="close-popup" onclick="closeProjectPopup()">&times;</button>
+                <div class="popup-title-container">
+                    <h3>${project.title}</h3>
+                </div>
+                <div class="popup-image-container">
+                    <img src="${project.image}" alt="Popup Image">
+                </div>
+                <div class="popup-description-container">
+                    <p>${project.description}</p>
+                </div>
+            </div>
+        `;
+
+        popup.innerHTML = popupContent;
+
+        popup.style.display = 'flex'; // Ensure the popup is displayed
+        setTimeout(() => {
+            popup.classList.add('visible');
+        }, 10); // Add a slight delay for the transition effect
     };
 
     window.closeProjectPopup = () => {
-        document.getElementById('project-popup').classList.remove('visible');
-    };
-
-    window.navigateProject = (direction) => {
-        const popupBody = document.querySelector('.popup-body');
-        popupBody.classList.add('fade-out'); // Add fade-out animation
-
+        const popup = document.getElementById('project-popup');
+        popup.classList.remove('visible');
         setTimeout(() => {
-            currentProjectIndex = (currentProjectIndex + direction + projects.length) % projects.length;
-            updatePopupContent();
-            popupBody.classList.remove('fade-out'); // Remove fade-out class
-            popupBody.classList.add('fade-in'); // Add fade-in animation
-
-            setTimeout(() => {
-                popupBody.classList.remove('fade-in'); // Remove fade-in class
-            }, 300); // Duration of fade-in animation
-        }, 300); // Duration of fade-out animation
+            popup.style.display = 'none'; // Hide the popup after the transition
+        }, 300); // Match the CSS transition duration
     };
-
-    const updatePopupContent = () => {
-        const project = projects[currentProjectIndex];
-        document.getElementById('popup-title').textContent = project.title;
-        document.getElementById('popup-image').src = project.image;
-        document.getElementById('popup-description').textContent = project.description;
-    };
-
-    // Make projects clickable
-    carouselItems.forEach((item, index) => {
-        item.addEventListener('click', () => {
-            const project = projects[index];
-            openProjectPopup(project.image, project.title, project.description);
-        });
-    });
 
     const navButtons = document.querySelectorAll('.nav-buttons a');
 
