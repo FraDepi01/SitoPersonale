@@ -392,3 +392,16 @@ h2 {
     background-color: #333333; /* Darker background on hover */
     transform: scale(1.05); /* Slight zoom on hover */
 }
+
+@media (min-width: 769px) {
+    .chi-sono-content {
+        display: flex;
+        align-items: center; /* Align items vertically at the center */
+        justify-content: space-between; /* Distribute content with space between */
+    }
+
+    .contact-button {
+        align-self: top; /* Align the button vertically to the center of the image */
+        margin-right: 0; /* Remove extra margin on the right */
+    }
+}
