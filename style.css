@@ -239,11 +239,18 @@ header, main, footer {
         text-align: center;
         width: 65%;
     }
+
+    #chi-sono h2 {
+        margin-bottom: 0px;
+    }
+    .chi-sono-content {
+        gap: 10px;
+    }
 }
 
 section {
-    padding: 50px 0; /* Add spacing above and below sections */
-    margin: 0 auto;
+    padding: 48px 0; /* Riduci lo spazio sopra e sotto le section */
+    margin: 0px; /* margine inferiore tra le sezioni */
     max-width: 1200px;
 }
 
@@ -668,4 +675,20 @@ h2 {
     .portfolio-carousel {
         gap: 14px;
     }
+}
+
+.contact-social-title,
+.contact-form-title {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.contact-social .footer-minimal {
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
 }
