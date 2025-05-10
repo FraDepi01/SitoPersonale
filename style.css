@@ -184,13 +184,19 @@ header, main, footer {
     .top-bar {
         flex-wrap: wrap; /* Allow wrapping of content */
         justify-content: center; /* Center-align content in mobile view */
-        padding: 0 20px; /* Reduce padding for smaller screens */
+        padding: 0 0px; /* Reduce padding for smaller screens */
+        align-items: center;
+        height: 70px;
     }
 
     .top-bar .logo {
         position: static; /* Remove absolute positioning for better layout */
-        margin-bottom: 10px; /* Add spacing below the logo */
-        height: 50px; /* Reduce logo size */
+        margin-bottom: 0;
+        height: 70px; /* Reduce logo size */
+        display: flex;
+        align-items: center;
+        /* Centra verticalmente e abbassa leggermente il logo */
+        margin-top: 0px;
     }
 
     .top-bar a {
