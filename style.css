@@ -342,7 +342,7 @@ h2 {
 .animated-text {
     text-align: center;
     margin-top: 0px; /* Add spacing below the top bar */
-    font-size: 2.5rem; /* Adjust font size */
+    font-size: 2rem; /* Adjust font size */
     font-weight: bold;
     font-family: 'Oxanium', Arial, sans-serif; /* Use Oxanium font */
     color: #000000; /* Text color */
@@ -371,15 +371,23 @@ h2 {
 
 .dynamic-text {
     color: #ffffff; /* Highlight color for dynamic text */
-    animation: changeText 10s infinite; /* Infinite animation */
+    /* animation: changeText 10s infinite;  RIMOSSA animazione CSS */
     background: #000;
     border-radius: 40px;
-    padding: 8px 24px;
+    padding: 10px 0px;
     display: inline-block;
-    min-width: 220px; /* Optional: minimum width for better look */
+    min-width: 40px; /* Optional: minimum width for better look */
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    transition: background 0.3s, color 0.3s;
-    
+    transition: min-width 0.25s cubic-bezier(.4,1.4,.6,1), padding 0.25s cubic-bezier(.4,1.4,.6,1), width 0.25s cubic-bezier(.4,1.4,.6,1);
+    overflow: hidden;
+    text-align: left;
+    /* Quando vuoto, comportati come se ci fosse un carattere */
+}
+.dynamic-text:empty::after {
+    content: "A";
+    opacity: 0;
+    display: inline-block;
+    width: 1ch;
 }
 
 /* Rimuovi la linea sotto il testo dinamico */
