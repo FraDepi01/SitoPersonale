@@ -55,6 +55,19 @@ footer {
     left: 50px; /* Maintain the same left margin */
     top: 0px; /* Adjust the vertical alignment */
     height: 70px; /* Adjust the size of the logo */
+    cursor: pointer;
+    /* Nessuna animazione o effetto hover */
+    transition: none;
+    filter: none;
+    box-shadow: none;
+    /* Disabilita eventuali effetti hover */
+}
+
+.top-bar .logo:hover {
+    /* Disabilita qualsiasi effetto hover */
+    filter: none;
+    box-shadow: none;
+    transition: none;
 }
 
 .top-bar a {
