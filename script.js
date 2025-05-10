@@ -88,6 +88,37 @@ document.addEventListener("DOMContentLoaded", () => {
             carousel.scrollBy({ left: 140, behavior: 'smooth' });
         });
     }
+
+    // Portfolio popup
+    const modal = document.getElementById('portfolio-modal');
+    const modalImg = document.getElementById('portfolio-modal-img');
+    const modalDesc = document.getElementById('portfolio-modal-desc');
+    const modalClose = document.querySelector('.portfolio-modal-close');
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+        item.addEventListener('click', function () {
+            const img = this.querySelector('img');
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalDesc.textContent = this.getAttribute('data-description') || '';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    if (modalClose) {
+        modalClose.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    // Chiudi popup cliccando fuori dal contenuto
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

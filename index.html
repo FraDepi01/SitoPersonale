@@ -81,12 +81,22 @@
                 <div class="portfolio-carousel-wrapper">
                     <button class="portfolio-arrow left" aria-label="Scorri a sinistra">&#8592;</button>
                     <div class="portfolio-carousel">
-                        <!-- Sostituisci src e alt con i tuoi progetti reali -->
-                        <div class="portfolio-item"><img src="Packaging Brexidol.jpg" alt="Brexidol"></div>
-                        <div class="portfolio-item"><img src="Infografica Pogba.jpg" alt="Infografica Pogba"></div>
-                        <div class="portfolio-item"><img src="De_Pinto_Francesco_CartaCreativa.png" alt="Poster "obsession""></div>
-                        <div class="portfolio-item"><img src="bottle FINALE edited.png" alt="Packaging Cholula"></div>
-                        <div class="portfolio-item"><img src="Poster Tyler The Creator.jpg" alt="Poster Tyler The Creator"></div>
+                        <!-- Sostituisci src, alt e data-description con i tuoi progetti reali -->
+                        <div class="portfolio-item" data-description="Redesign concettuale del packaging di cerotti contro le infiammazioni articolari "Brexidol".">
+                            <img src="Packaging Brexidol.jpg" alt="Brexidol">
+                        </div>
+                        <div class="portfolio-item" data-description="Poster realizzato in omaggio alle stagioni di Paul Labile Pogba con la Juventus, alcune delle stagioni migliori della sua carriera.">
+                            <img src="Infografica Pogba.jpg" alt="Infografica Pogba">
+                        </div>
+                        <div class="portfolio-item" data-description="Poster che ha come soggetto Cristiano Ronaldo, ispirato alla sua carriera e ai suoi successi oltre che alla sua mentalità vincente che lo ha contraddistinto.">
+                            <img src="De_Pinto_Francesco_CartaCreativa.png" alt='Poster "obsession"'>
+                        </div>
+                        <div class="portfolio-item" data-description="Redesign del packaging di una bottiglia di salsa piccante Cholula, con un design più moderno.">
+                            <img src="bottle FINALE edited.png" alt="Packaging Cholula">
+                        </div>
+                        <div class="portfolio-item" data-description="Questo è un poster di Tyler The Creator realizzato con Photoshop e Illustrator per l'album IGOR.">
+                            <img src="Poster Tyler The Creator ottimizzato per web.jpg" alt="Poster Tyler The Creator">
+                        </div>
                         <!-- ...altre immagini... -->
                     </div>
                     <button class="portfolio-arrow right" aria-label="Scorri a destra">&#8594;</button>
@@ -137,6 +147,17 @@
                 </div>
             </section>
         </main>
+
+        <!-- Popup Portfolio Modal -->
+        <div id="portfolio-modal" class="portfolio-modal">
+            <div class="portfolio-modal-content">
+                <button class="portfolio-modal-close" aria-label="Chiudi popup">&times;</button>
+                <div class="portfolio-modal-image">
+                    <img src="" alt="Anteprima progetto" id="portfolio-modal-img">
+                </div>
+                <div class="portfolio-modal-desc" id="portfolio-modal-desc"></div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer>
