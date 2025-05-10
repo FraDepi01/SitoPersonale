@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap'); /* Import Oxanium font */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&family=Zain&display=swap'); /* Import Oxanium and Zain font */
 
 @font-face {
     font-family: 'Futured';
@@ -8,7 +8,7 @@
 body {
     padding-top: 70px; /* Adjust padding to match the top bar height */
     margin: 0;
-    font-family: Arial, sans-serif; /* Exclude Oxanium font from the body */
+    font-family: 'Zain', Arial, sans-serif; /* Use Zain font for body */
 }
 
 footer {
@@ -150,6 +150,23 @@ header, main, footer {
     max-height: 200px; /* Expand to show the menu */
 }
 
+.menu-links a.contact-highlight {
+    position: relative;
+    z-index: 1;
+    padding: 6px 18px;
+    border-radius: 18px;
+    background: #FFD600; /* Giallo acceso, puoi regolare se vuoi un tono diverso */
+    color: #000 !important;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.menu-links a.contact-highlight:hover {
+    background: #FFEA70; /* Giallo più chiaro al passaggio */
+    color: #000 !important;
+}
+
 @media (max-width: 768px) {
     .top-bar {
         flex-wrap: wrap; /* Allow wrapping of content */
@@ -176,6 +193,8 @@ header, main, footer {
     .menu-links {
         display: flex; /* Hide links by default on smaller screens */
         flex-direction: column;
+        align-items: center; /* Center links horizontally in burger menu */
+        justify-content: center;
         position: absolute;
         top: 70px; /* Position directly below the burger menu */
         right: 0;
@@ -194,6 +213,12 @@ header, main, footer {
         max-height: 200px; /* Expand to show the menu */
         opacity: 1; /* Make the menu visible */
         visibility: visible; /* Show the menu */
+    }
+
+    .menu-links a {
+        justify-content: center; /* Center text inside each link */
+        text-align: center;
+        width: 65%;
     }
 }
 
@@ -308,11 +333,45 @@ h2 {
     font-weight: bold;
     font-family: 'Oxanium', Arial, sans-serif; /* Use Oxanium font */
     color: #000000; /* Text color */
+    background: #ffd600;
+    border-radius: 0px;
+    padding: 0px 0px 50px 0px;
+    margin: 0;
+    display: block;
+}
+
+.intro-text {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px; /* Add spacing above the intro text */
+    font-size: 2.5rem; /* Large font size */
+    font-weight: bold;
+    font-family: 'Oxanium', Arial, sans-serif; /* Use Oxanium font */
+    color: #000000; /* Text color */
+    background: #ffd600;
+    border-radius: 0px;
+    padding: 10px 0px 10px 0px; /* Add padding for better spacing */
+    display: block; /* Cambiato da inline-block a block */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .dynamic-text {
-    color: #000000; /* Highlight color for dynamic text */
+    color: #ffffff; /* Highlight color for dynamic text */
     animation: changeText 10s infinite; /* Infinite animation */
+    background: #000;
+    border-radius: 40px;
+    padding: 8px 24px;
+    display: inline-block;
+    min-width: 220px; /* Optional: minimum width for better look */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    transition: background 0.3s, color 0.3s;
+    
+}
+
+/* Rimuovi la linea sotto il testo dinamico */
+.divider {
+    display: none;
 }
 
 @keyframes changeText {
@@ -332,15 +391,6 @@ h2 {
     color: #000000; /* Text color */
 }
 
-.divider {
-    margin: 20px auto; /* Add spacing above and below the line */
-    width: 80%; /* Set the width of the line */
-    border: none; /* Remove default border */
-    height: 2px; /* Set the thickness of the line */
-    background-color: #000000; /* Black color for the line */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add black shadow */
-}
-
 .chi-sono-content {
     display: flex;
     align-items: flex-start; /* Align items at the top */
@@ -354,7 +404,7 @@ h2 {
     border-radius: 15px; /* Rounded corners */
     overflow: hidden; /* Ensure the image fits within the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
-    margin-top: 20px; /* Move the photo downward */
+    margin-top: 35px; /* Move the photo downward */
     flex-shrink: 0; /* Prevent the container from shrinking on smaller screens */
 }
 
@@ -366,7 +416,7 @@ h2 {
 }
 
 .about-me {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1.4rem; /* Adjust font size */
     line-height: 1.6; /* Improve readability */
     color: #333333; /* Text color */
     max-width: 600px; /* Limit the width of the text */
@@ -376,13 +426,13 @@ h2 {
 
 .contact-button {
     display: inline-block;
-    margin: 20px 0 0; /* Add spacing above the button */
+    margin: -20px 0 0; /* Add spacing above the button */
     padding: 10px 20px;
     background-color: #000000; /* Black background */
     color: #ffffff; /* White text */
     text-align: center;
     text-decoration: none; /* Remove underline */
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: bold;
     border-radius: 25px; /* Fully rounded corners */
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
@@ -393,15 +443,94 @@ h2 {
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
+.skills-graph {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+    padding: 20px 10px 10px 10px;
+    background: rgba(0,0,0,0.03);
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skill span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 2px;
+}
+
+.bar-bg {
+    width: 100%;
+    height: 18px;
+    background: #e0e0e0;
+    border-radius: 9px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #FFD600 60%, #FFEA70 100%);
+    border-radius: 9px 0 0 9px;
+    transition: width 1s cubic-bezier(.4,1.4,.6,1);
+}
+
+@media (max-width: 600px) {
+    .skills-graph {
+        max-width: 100%;
+        padding: 10px 2vw 10px 2vw;
+        gap: 12px;
+    }
+    .skill span {
+        font-size: 0.95rem;
+    }
+    .bar-bg {
+        height: 14px;
+    }
+}
+
 @media (min-width: 769px) {
     .chi-sono-content {
         display: flex;
-        align-items: center; /* Align items vertically at the center */
-        justify-content: space-between; /* Distribute content with space between */
+        align-items: stretch; /* Stretch children to full height */
+        justify-content: space-between;
+    }
+
+    .photo-container {
+        display: flex;
+        align-items: center; /* Center content vertically */
     }
 
     .contact-button {
-        align-self: top; /* Align the button vertically to the center of the image */
-        margin-right: 0; /* Remove extra margin on the right */
+        align-self: center; /* Center the button vertically to the photo */
+        margin-right: 0;
+        margin-left: 40px; /* Optional: add space from the text */
+    }
+
+    .menu-links a {
+        /* Sposta leggermente verso il basso i link della top-bar */
+        margin-top: 0px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skills-graph {
+        max-width: none;
+        width: 80vw;
+        border-radius: 18px;
+        padding: 20px 10px 10px 10px;
     }
 }
