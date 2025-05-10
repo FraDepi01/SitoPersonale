@@ -346,9 +346,9 @@ h2 {
     font-weight: bold;
     font-family: 'Oxanium', Arial, sans-serif; /* Use Oxanium font */
     color: #000000; /* Text color */
-    background: #ffd600;
+    background: linear-gradient(353deg, rgb(255, 255, 255) -75%, #ffd600 35%, #ffd600 100%);
     border-radius: 0px;
-    padding: 0px 0px 50px 0px;
+    padding: 0px 0px 25px 0px;
     margin: 0;
     display: block;
 }
@@ -357,11 +357,11 @@ h2 {
     text-align: center;
     margin-top: 0px;
     margin-bottom: 0px; /* Add spacing above the intro text */
-    font-size: 2.5rem; /* Large font size */
+    font-size: 2rem; /* Large font size */
     font-weight: bold;
     font-family: 'Oxanium', Arial, sans-serif; /* Use Oxanium font */
     color: #000000; /* Text color */
-    background: #ffd600;
+    background: linear-gradient(173deg, rgb(255, 255, 255) -55%, #ffd600 35%, #ffd600 100%);
     border-radius: 0px;
     padding: 10px 0px 10px 0px; /* Add padding for better spacing */
     display: block; /* Cambiato da inline-block a block */
@@ -372,12 +372,12 @@ h2 {
 .dynamic-text {
     color: #ffffff; /* Highlight color for dynamic text */
     /* animation: changeText 10s infinite;  RIMOSSA animazione CSS */
-    background: #000;
+    background: linear-gradient(353deg, rgba(255,255,255,0.18) -40%, #000 0%, #000 50%, #ffd600 250%);
     border-radius: 40px;
     padding: 10px 0px;
     display: inline-block;
     min-width: 40px; /* Optional: minimum width for better look */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     transition: min-width 0.25s cubic-bezier(.4,1.4,.6,1), padding 0.25s cubic-bezier(.4,1.4,.6,1), width 0.25s cubic-bezier(.4,1.4,.6,1);
     overflow: hidden;
     text-align: left;
