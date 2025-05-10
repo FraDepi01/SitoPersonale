@@ -74,6 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
         setDynamicTextWidth('');
         typeEffect();
     }
+
+    // Portfolio carousel arrows
+    const carousel = document.querySelector('.portfolio-carousel');
+    const leftArrow = document.querySelector('.portfolio-arrow.left');
+    const rightArrow = document.querySelector('.portfolio-arrow.right');
+
+    if (carousel && leftArrow && rightArrow) {
+        leftArrow.addEventListener('click', () => {
+            carousel.scrollBy({ left: -140, behavior: 'smooth' });
+        });
+        rightArrow.addEventListener('click', () => {
+            carousel.scrollBy({ left: 140, behavior: 'smooth' });
+        });
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
