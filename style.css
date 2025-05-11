@@ -249,7 +249,7 @@ header, main, footer {
 }
 
 section {
-    padding: 48px 0; /* Riduci lo spazio sopra e sotto le section */
+    padding: 24px 0; /* Diminuisci lo spazio sopra e sotto le section */
     margin: 0px; /* margine inferiore tra le sezioni */
     max-width: 1200px;
 }
@@ -347,7 +347,7 @@ form button:hover {
 }
 
 h2 {
-    margin-top: 35px; /* Reduce spacing above each h2 */
+    margin-top: 0px; /* Reduce spacing above each h2 */
     font-size: 1.5rem; /* Optional: Adjust font size for better visibility */
     font-weight: bold; /* Optional: Ensure headings stand out */
 }
@@ -831,4 +831,20 @@ h2 {
     height: 28px;
     display: block;
     filter: invert(1);
+}
+
+.portfolio-subtitle {
+    text-align: left;
+    font-size: 1.4rem; /* Uguale a .about-me */
+    color: #222;
+    margin-bottom: 18px;
+    margin-top: -8px;
+    font-family: 'Zain', Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+}
+
+#dove-puoi-trovarmi {
+    margin-top: 28px !important;
+    padding-top: 24px !important;
 }
