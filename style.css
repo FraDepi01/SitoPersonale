@@ -9,6 +9,7 @@ body {
     padding-top: 70px; /* Adjust padding to match the top bar height */
     margin: 0;
     font-family: 'Zain', Arial, sans-serif; /* Use Zain font for body */
+    background: #ffffff;
 }
 
 footer {
