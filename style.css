@@ -881,7 +881,23 @@ h2 {
     letter-spacing: 0.2px;
 }
 
+.contact-intro-text {
+    font-family: 'Zain', Arial, sans-serif;
+    font-size: 1rem;
+    color: #222;
+    text-align: center;
+    margin: 0 auto 50px auto;
+    max-width: 100%;
+    line-height: 1.5;
+    background: #ffe066;
+    border-radius: 18px;
+    padding: 18px 22px 18px 22px;
+    box-shadow: 0 2px 8px rgba(255, 214, 0, 0.4);
+    display: block;
+}
+
 #dove-puoi-trovarmi {
     margin-top: 28px !important;
     padding-top: 24px !important;
 }
+
