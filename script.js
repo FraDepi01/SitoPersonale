@@ -187,6 +187,18 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.appendChild(overlay);
         });
     }
+
+    // Gestione click anche per il secondo carosello
+    document.querySelectorAll('.portfolio-carousel-alt .portfolio-item-alt').forEach(function(item) {
+        item.addEventListener('click', function() {
+            const img = item.querySelector('img');
+            const desc = item.getAttribute('data-description') || '';
+            document.getElementById('portfolio-modal-img').src = img.src;
+            document.getElementById('portfolio-modal-img').alt = img.alt;
+            document.getElementById('portfolio-modal-desc').textContent = desc;
+            document.getElementById('portfolio-modal').classList.add('active');
+        });
+    });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
