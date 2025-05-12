@@ -201,6 +201,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Nascondi le frecce se non serve scrollare (per entrambi i caroselli)
+function updateCarouselArrows(wrapperSelector, carouselSelector, itemSelector, arrowLeftSelector, arrowRightSelector) {
+    const wrapper = document.querySelector(wrapperSelector);
+    if (!wrapper) return;
+    const carousel = wrapper.querySelector(carouselSelector);
+    const items = carousel ? carousel.querySelectorAll(itemSelector) : [];
+    const arrowLeft = wrapper.querySelector(arrowLeftSelector);
+    const arrowRight = wrapper.querySelector(arrowRightSelector);
+
+    if (!carousel || !arrowLeft || !arrowRight) return;
+
+    // Calcola quanti item sono visibili rispetto allo spazio disponibile
+    const wrapperWidth = carousel.offsetWidth;
+    let totalItemsWidth = 0;
+    items.forEach(item => {
+        totalItemsWidth += item.offsetWidth;
+    });
+
+    // Se non serve scrollare, nascondi le frecce
+    if (totalItemsWidth <= wrapperWidth + 2) {
+        arrowLeft.style.display = 'none';
+        arrowRight.style.display = 'none';
+    } else {
+        arrowLeft.style.display = '';
+        arrowRight.style.display = '';
+    }
+}
+
+// Esegui al caricamento e al resize
+function updateAllCarousels() {
+    updateCarouselArrows(
+        '.portfolio-carousel-wrapper',
+        '.portfolio-carousel',
+        '.portfolio-item',
+        '.portfolio-arrow.left',
+        '.portfolio-arrow.right'
+    );
+    updateCarouselArrows(
+        '.portfolio-carousel-wrapper-alt',
+        '.portfolio-carousel-alt',
+        '.portfolio-item-alt',
+        '.portfolio-arrow.left',
+        '.portfolio-arrow.right'
+    );
+}
+
+window.addEventListener('DOMContentLoaded', updateAllCarousels);
+window.addEventListener('resize', updateAllCarousels);
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
