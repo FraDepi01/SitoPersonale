@@ -581,7 +581,7 @@ h2 {
 
 .portfolio-carousel-wrapper {
     position: relative;
-    width: 100vw;
+    width: 100%;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
