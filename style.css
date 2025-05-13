@@ -1053,3 +1053,56 @@ h2 {
     font-size: inherit;
 }
 
+#cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5000;
+    background: rgba(0,0,0,0.97);
+    color: #fff;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+    min-height: 0;
+    font-family: 'Oxanium', Arial, sans-serif;
+}
+.cookie-banner-content {
+    max-width: 600px;
+    margin: 18px;
+    padding: 18px 24px;
+    background: #222;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+#cookie-banner button {
+    background: #FFD600;
+    color: #000;
+    border: none;
+    border-radius: 18px;
+    padding: 8px 22px;
+    font-size: 1rem;
+    font-family: 'Oxanium', Arial, sans-serif;
+    font-weight: bold;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#cookie-banner button:hover {
+    background: #ffe066;
+}
+#cookie-banner a {
+    color: #FFD600;
+    text-decoration: underline;
+    font-size: 0.98rem;
+    margin-top: 4px;
+}
+

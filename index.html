@@ -252,6 +252,38 @@
                 <p>Contattami: <a href="mailto:fradepidsgn@gmail.com">fradepidsgn@gmail.com</a></p>
             </div>
         </footer>
+        <!-- Banner Cookie -->
+        <div id="cookie-banner" style="display:none;">
+            <div class="cookie-banner-content">
+                Questo sito utilizza cookie tecnici necessari al funzionamento e, solo previo consenso, cookie di terze parti per finalità statistiche e di profilazione. <br>
+                <button id="cookie-accept">Accetta</button>
+                <button id="cookie-decline">Rifiuta</button>
+                <a href="#" id="cookie-policy-link">Leggi la cookie policy</a>
+            </div>
+        </div>
+        <!-- Popup Cookie Policy -->
+        <div id="cookie-policy-modal" class="portfolio-modal" style="display:none;">
+            <div class="portfolio-modal-content" style="max-width:600px;flex-direction:column;">
+                <button class="portfolio-modal-close" id="cookie-policy-modal-close" aria-label="Chiudi popup">&times;</button>
+                <div class="portfolio-modal-desc" style="max-width:100%;padding:32px 24px;font-size:1rem;line-height:1.6;display:block;overflow-y:auto;">
+                    <h2 style="font-size:1.3rem;margin-top:0;">Cookie Policy</h2>
+                    <p>
+                        Questo sito utilizza esclusivamente cookie tecnici necessari al corretto funzionamento delle pagine web. Non vengono utilizzati cookie di profilazione propri.<br><br>
+                        <strong>Cosa sono i cookie?</strong><br>
+                        I cookie sono piccoli file di testo che i siti visitati dagli utenti inviano ai loro terminali, dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.<br><br>
+                        <strong>Cookie tecnici</strong><br>
+                        I cookie tecnici sono necessari per consentire la navigazione e il corretto funzionamento del sito. Senza questi cookie, alcune funzionalità potrebbero non essere disponibili.<br><br>
+                        <strong>Cookie di terze parti</strong><br>
+                        Il sito può utilizzare servizi di terze parti (ad esempio, Google Analytics) che potrebbero installare cookie per finalità statistiche in forma aggregata. Nessun dato personale viene profilato o utilizzato per finalità di marketing senza il tuo consenso.<br><br>
+                        <strong>Gestione dei cookie</strong><br>
+                        Puoi gestire le preferenze relative ai cookie direttamente dal banner presente sul sito. In qualsiasi momento puoi modificare la tua scelta cancellando i cookie dal tuo browser.<br><br>
+                        <strong>Titolare del trattamento</strong><br>
+                        Francesco De Pinto - Per informazioni scrivere a <a href="mailto:fradepidsgn@gmail.com">fradepidsgn@gmail.com</a>.<br><br>
+                        Per ulteriori dettagli consulta la <a href="#" id="privacy-link-from-cookie">privacy policy</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script>
@@ -274,6 +306,62 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Banner Cookie
+function showCookieBanner() {
+    if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookie-banner').style.display = 'flex';
+    }
+}
+function hideCookieBanner() {
+    document.getElementById('cookie-banner').style.display = 'none';
+}
+document.addEventListener('DOMContentLoaded', function() {
+    showCookieBanner();
+    document.getElementById('cookie-accept').onclick = function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        hideCookieBanner();
+    };
+    document.getElementById('cookie-decline').onclick = function() {
+        localStorage.setItem('cookieConsent', 'declined');
+        hideCookieBanner();
+    };
+    document.getElementById('cookie-policy-link').onclick = function(e) {
+        e.preventDefault();
+        // Puoi collegare qui la tua cookie policy o mostrare un popup simile a quello privacy
+        alert('Cookie policy: Questo sito utilizza solo cookie tecnici necessari al funzionamento. Nessun cookie di profilazione viene utilizzato.');
+    };
+});
 // ...existing code...
+document.addEventListener('DOMContentLoaded', function() {
+    // ...existing code...
+
+    // Cookie policy popup
+    var cookiePolicyLink = document.getElementById('cookie-policy-link');
+    var cookiePolicyModal = document.getElementById('cookie-policy-modal');
+    var cookiePolicyClose = document.getElementById('cookie-policy-modal-close');
+    var privacyLinkFromCookie = document.getElementById('privacy-link-from-cookie');
+    var privacyModal = document.getElementById('privacy-modal');
+
+    if (cookiePolicyLink && cookiePolicyModal && cookiePolicyClose) {
+        cookiePolicyLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            cookiePolicyModal.style.display = 'flex';
+        });
+        cookiePolicyClose.addEventListener('click', function() {
+            cookiePolicyModal.style.display = 'none';
+        });
+        cookiePolicyModal.addEventListener('click', function(e) {
+            if (e.target === cookiePolicyModal) cookiePolicyModal.style.display = 'none';
+        });
+    }
+    if (privacyLinkFromCookie && privacyModal) {
+        privacyLinkFromCookie.addEventListener('click', function(e) {
+            e.preventDefault();
+            cookiePolicyModal.style.display = 'none';
+            privacyModal.style.display = 'flex';
+        });
+    }
+    // ...existing code...
+});
 </script>
 </html>
