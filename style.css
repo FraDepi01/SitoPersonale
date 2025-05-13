@@ -541,7 +541,7 @@ h2 {
 
 @media (max-width: 600px) {
     .skills-graph {
-        max-width: 100%;
+        width: 100%;
         padding: 10px 2vw 10px 2vw;
         gap: 12px;
     }
@@ -583,7 +583,7 @@ h2 {
 @media (min-width: 1200px) {
     .skills-graph {
         max-width: none;
-        width: 80vw;
+        width: 100%;
         border-radius: 18px;
         padding: 20px 10px 10px 10px;
     }
@@ -731,7 +731,8 @@ h2 {
     justify-content: flex-start;
     min-width: 180px;
     max-width: 350px;
-    overflow-y: auto;
+    /* rimuovi lo scroll */
+    overflow-y: visible;
 }
 .portfolio-modal-close {
     position: absolute;
@@ -804,7 +805,7 @@ h2 {
         min-height: 180px;
         max-height: 220px;
         justify-content: center;
-        padding: 12px 8px 4px 8px;
+        padding: 34px 8px 34px 8px;
         position: relative;
     }
     .portfolio-modal-image img {
@@ -812,7 +813,7 @@ h2 {
         max-height: 180px;
     }
     .portfolio-modal-desc {
-        padding: 28px 10px 34px 10px;
+        padding: 140px 10px 140px 10px;
         font-size: 1.3rem;
         text-align: center;
         max-width: 100vw;
@@ -1002,7 +1003,7 @@ h2 {
     }
     .portfolio-desc-alt {
         border-radius: 12px;
-        min-height: 36px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
