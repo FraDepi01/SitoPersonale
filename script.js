@@ -199,6 +199,28 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('portfolio-modal').classList.add('active');
         });
     });
+
+    // Carosello secondario
+    const altWrapper = document.querySelector('.portfolio-carousel-wrapper-alt');
+    if (altWrapper) {
+        const altCarousel = altWrapper.querySelector('.portfolio-carousel-alt');
+        const altLeft = altWrapper.querySelector('.portfolio-arrow.left');
+        const altRight = altWrapper.querySelector('.portfolio-arrow.right');
+
+        if (altCarousel && altLeft && altRight) {
+            const scrollAmount = 260; // o il valore che preferisci
+
+            altLeft.addEventListener('click', function (e) {
+                e.preventDefault();
+                altCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+
+            altRight.addEventListener('click', function (e) {
+                e.preventDefault();
+                altCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+        }
+    }
 });
 
 // Nascondi le frecce se non serve scrollare (per entrambi i caroselli)

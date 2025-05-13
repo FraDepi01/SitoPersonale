@@ -181,8 +181,28 @@
                     <label for="message">Messaggio:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                     
+                    <label class="privacy-label">
+                        <input type="checkbox" name="privacy" required>
+                        Ho letto e accetto la <a href="#" id="privacy-link">privacy policy</a>
+                    </label>
                     <button type="submit">Invia</button>
                 </form>
+                <!-- Popup Privacy Policy -->
+                <div id="privacy-modal" class="portfolio-modal" style="display:none;">
+                    <div class="portfolio-modal-content" style="max-width:600px;flex-direction:column;">
+                        <button class="portfolio-modal-close" id="privacy-modal-close" aria-label="Chiudi popup">&times;</button>
+                        <div class="portfolio-modal-desc" style="max-width:100%;padding:32px 24px;font-size:1rem;line-height:1.6;display:block;overflow-y:auto;">
+                            <h2 style="font-size:1.3rem;margin-top:0;">Informativa Privacy</h2>
+                            <p>
+                                Ai sensi del Regolamento UE 2016/679 (“GDPR”), ti informo che i dati personali raccolti tramite questo modulo di contatto saranno utilizzati esclusivamente per rispondere alle tue richieste e non saranno ceduti a terzi. Il conferimento dei dati è facoltativo, ma necessario per ricevere una risposta.<br><br>
+                                I dati saranno trattati con strumenti informatici e/o cartacei, adottando misure di sicurezza adeguate a tutelare la riservatezza e l’integrità delle informazioni. I dati saranno conservati solo per il tempo necessario a gestire la richiesta e successivamente cancellati.<br><br>
+                                In qualsiasi momento puoi esercitare i diritti previsti dagli articoli 15-22 del GDPR, tra cui l’accesso, la rettifica, la cancellazione, la limitazione o l’opposizione al trattamento, scrivendo a <a href="mailto:fradepidsgn@gmail.com">fradepidsgn@gmail.com</a>.<br><br>
+                                Titolare del trattamento: Francesco De Pinto.<br>
+                                Per ulteriori informazioni puoi scrivere all’indirizzo email sopra indicato.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             <section id="dove-puoi-trovarmi">    
                 <h2>Dove puoi trovarmi</h2> <!-- New heading -->
                 <div class="google-maps">
@@ -234,4 +254,26 @@
         </footer>
     </div>
 </body>
+<script>
+// ...existing code...
+document.addEventListener('DOMContentLoaded', function() {
+    var privacyLink = document.getElementById('privacy-link');
+    var privacyModal = document.getElementById('privacy-modal');
+    var privacyClose = document.getElementById('privacy-modal-close');
+
+    if (privacyLink && privacyModal && privacyClose) {
+        privacyLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            privacyModal.style.display = 'flex';
+        });
+        privacyClose.addEventListener('click', function() {
+            privacyModal.style.display = 'none';
+        });
+        privacyModal.addEventListener('click', function(e) {
+            if (e.target === privacyModal) privacyModal.style.display = 'none';
+        });
+    }
+});
+// ...existing code...
+</script>
 </html>
