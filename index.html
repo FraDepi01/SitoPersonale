@@ -308,9 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 // Banner Cookie
 function showCookieBanner() {
-    if (!localStorage.getItem('cookieConsent')) {
-        document.getElementById('cookie-banner').style.display = 'flex';
-    }
+    document.getElementById('cookie-banner').style.display = 'flex';
 }
 function hideCookieBanner() {
     document.getElementById('cookie-banner').style.display = 'none';
@@ -318,18 +316,12 @@ function hideCookieBanner() {
 document.addEventListener('DOMContentLoaded', function() {
     showCookieBanner();
     document.getElementById('cookie-accept').onclick = function() {
-        localStorage.setItem('cookieConsent', 'accepted');
         hideCookieBanner();
     };
     document.getElementById('cookie-decline').onclick = function() {
-        localStorage.setItem('cookieConsent', 'declined');
         hideCookieBanner();
     };
-    document.getElementById('cookie-policy-link').onclick = function(e) {
-        e.preventDefault();
-        // Puoi collegare qui la tua cookie policy o mostrare un popup simile a quello privacy
-        alert('Cookie policy: Questo sito utilizza solo cookie tecnici necessari al funzionamento. Nessun cookie di profilazione viene utilizzato.');
-    };
+    // ...existing code...
 });
 // ...existing code...
 document.addEventListener('DOMContentLoaded', function() {
