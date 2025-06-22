@@ -286,3 +286,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Gestione chiusura popup portfolio (X)
+    var portfolioModal = document.getElementById('portfolio-modal');
+    var portfolioClose = document.querySelector('#portfolio-modal .portfolio-modal-close');
+
+    if (portfolioModal && portfolioClose) {
+        portfolioClose.addEventListener('click', function() {
+            portfolioModal.classList.remove('active');
+            portfolioModal.style.display = 'none';
+        });
+
+        // Chiudi anche cliccando fuori dal contenuto
+        portfolioModal.addEventListener('click', function(e) {
+            if (e.target === portfolioModal) {
+                portfolioModal.classList.remove('active');
+                portfolioModal.style.display = 'none';
+            }
+        });
+    }
+
+    // Quando si apre il modal, assicurati che sia visibile
+    document.querySelectorAll('.portfolio-item, .portfolio-item-alt').forEach(function(item) {
+        item.addEventListener('click', function() {
+            portfolioModal.classList.add('active');
+            portfolioModal.style.display = 'flex';
+        });
+    });
+});
