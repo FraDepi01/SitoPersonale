@@ -200,7 +200,19 @@ header, main, footer {
     margin: 0 0 32px 0;
     text-align: left;
     padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+@media (min-width: 769px) {
+    .perche-professionista-content {
+        align-items: center;
+    }
+    .call-button {
+        align-self: center;
+    }
+}
+
 #perche-professionista h2 {
     font-family: 'Oxanium', Arial, sans-serif;
     font-size: 1.5rem;
@@ -211,7 +223,7 @@ header, main, footer {
     text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 751px) {
     .top-bar {
         flex-wrap: wrap; /* Allow wrapping of content */
         justify-content: center; /* Center-align content in mobile view */
@@ -515,6 +527,35 @@ h2 {
 .contact-button:hover {
     background-color: #333333; /* Darker background on hover */
     transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.call-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 28px;
+    background-color: #FFD600;
+    color: #000;
+    font-family: 'Oxanium', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    border: none;
+}
+.call-button:hover {
+    background-color: #FFEA70;
+    color: #000;
+    transform: scale(1.05);
+}
+@media (max-width: 750px) {
+    .call-button {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 12px 0;
+    }
 }
 
 .skills-graph {
