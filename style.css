@@ -191,6 +191,26 @@ header, main, footer {
     color: #000 !important;
 }
 
+.perche-professionista-content {
+    font-family: 'Zain', Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 0 32px 0;
+    text-align: left;
+    padding: 0 0 0 0;
+}
+#perche-professionista h2 {
+    font-family: 'Oxanium', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #000;
+    text-align: left;
+}
+
 @media (max-width: 768px) {
     .top-bar {
         flex-wrap: wrap; /* Allow wrapping of content */
