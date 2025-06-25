@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuLinks = document.querySelector(".menu-links");
 
     burgerMenu.addEventListener("click", () => {
-        burgerMenu.classList.toggle("active"); // Animate the burger menu
-        menuLinks.classList.toggle("active"); // Show or hide the menu
+        burgerMenu.classList.toggle("active"); 
+        menuLinks.classList.toggle("active"); 
     });
 
-    // Effetto scrittura/cancellazione per il testo dinamico
+    
     const dynamicText = document.querySelector('.dynamic-text');
     const roles = [
         "Graphic Designer",
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function setDynamicTextWidth(text) {
         if (!dynamicText) return;
-        // Crea uno span invisibile per calcolare la larghezza del testo
+        
         const tempSpan = document.createElement('span');
         tempSpan.style.visibility = 'hidden';
         tempSpan.style.position = 'absolute';
@@ -32,13 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
         tempSpan.style.fontFamily = window.getComputedStyle(dynamicText).fontFamily;
         tempSpan.style.fontSize = window.getComputedStyle(dynamicText).fontSize;
         tempSpan.style.fontWeight = window.getComputedStyle(dynamicText).fontWeight;
-        // Se il testo è vuoto, usa un carattere fittizio per la larghezza
+       
         tempSpan.textContent = text || 'A';
         document.body.appendChild(tempSpan);
         const width = tempSpan.offsetWidth;
         document.body.removeChild(tempSpan);
 
-        const minWidth = 30; // px, puoi regolare la dimensione minima
+        const minWidth = 30;
         dynamicText.style.width = Math.max(width + 30, minWidth) + 'px';
         dynamicText.style.paddingLeft = '24px';
         dynamicText.style.paddingRight = '24px';
